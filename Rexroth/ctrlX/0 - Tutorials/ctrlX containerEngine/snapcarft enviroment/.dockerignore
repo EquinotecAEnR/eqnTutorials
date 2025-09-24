@@ -1,0 +1,16 @@
+Dockerfile
+docker-compose/
+*.sh
+parts/
+prime/
+publish
+snap/
+stage/
+venv/
+*.deb
+.vscode
+*.snap
+*.gz
+.git/
+.editorconfig/
+.vscode/

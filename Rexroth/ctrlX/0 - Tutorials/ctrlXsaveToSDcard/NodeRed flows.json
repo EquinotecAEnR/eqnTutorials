@@ -1,0 +1,346 @@
+[
+    {
+        "id": "f8019f41458984fc",
+        "type": "tab",
+        "label": "Flow 7",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3043153210c8e4b7",
+        "type": "file",
+        "z": "f8019f41458984fc",
+        "name": "Write to a file",
+        "filename": "/media/mmcblk1p1/somename.json",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 530,
+        "y": 300,
+        "wires": [
+            [
+                "191f16aedef25f7d"
+            ]
+        ]
+    },
+    {
+        "id": "65dade34d7a3d05e",
+        "type": "inject",
+        "z": "f8019f41458984fc",
+        "name": "Data Simulation",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"data\":\"some data string\"}",
+        "payloadType": "json",
+        "x": 260,
+        "y": 300,
+        "wires": [
+            [
+                "3043153210c8e4b7"
+            ]
+        ]
+    },
+    {
+        "id": "191f16aedef25f7d",
+        "type": "debug",
+        "z": "f8019f41458984fc",
+        "name": "debug 39",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "b5be8b3780eace94",
+        "type": "file",
+        "z": "f8019f41458984fc",
+        "name": "write to file",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 730,
+        "y": 560,
+        "wires": [
+            [
+                "f4c17ee74545f9dc"
+            ]
+        ]
+    },
+    {
+        "id": "8d09571d10121fa6",
+        "type": "inject",
+        "z": "f8019f41458984fc",
+        "name": "Data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 560,
+        "wires": [
+            [
+                "918942b691794a5b"
+            ]
+        ]
+    },
+    {
+        "id": "f4c17ee74545f9dc",
+        "type": "debug",
+        "z": "f8019f41458984fc",
+        "name": "debug 41",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "ffe63ab0343dfd7a",
+        "type": "file in",
+        "z": "f8019f41458984fc",
+        "name": "Read from file",
+        "filename": "/media/mmcblk1p1/somename.json",
+        "filenameType": "str",
+        "format": "lines",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 520,
+        "y": 420,
+        "wires": [
+            [
+                "0f3981f0fb8b3457"
+            ]
+        ]
+    },
+    {
+        "id": "1350c18dc32b51ed",
+        "type": "inject",
+        "z": "f8019f41458984fc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 420,
+        "wires": [
+            [
+                "ffe63ab0343dfd7a"
+            ]
+        ]
+    },
+    {
+        "id": "558250bcd2794396",
+        "type": "debug",
+        "z": "f8019f41458984fc",
+        "name": "debug 42",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "0f3981f0fb8b3457",
+        "type": "json",
+        "z": "f8019f41458984fc",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 710,
+        "y": 420,
+        "wires": [
+            [
+                "558250bcd2794396"
+            ]
+        ]
+    },
+    {
+        "id": "918942b691794a5b",
+        "type": "function",
+        "z": "f8019f41458984fc",
+        "name": "Set data and variable file name",
+        "func": "var msgout;\n\n\n\nmsgout={filename:\"/media/mmcblk1p1/\" + msg.payload + \".json\", payload:msg.payload};\n\nreturn msgout;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 560,
+        "wires": [
+            [
+                "b5be8b3780eace94"
+            ]
+        ]
+    },
+    {
+        "id": "d520ef0110c8c648",
+        "type": "exec",
+        "z": "f8019f41458984fc",
+        "command": "ls /media/mmcblk1p1",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 520,
+        "y": 680,
+        "wires": [
+            [
+                "30cd1237a911c4f9"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "eb0a1b471bd05693",
+        "type": "inject",
+        "z": "f8019f41458984fc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 680,
+        "wires": [
+            [
+                "d520ef0110c8c648"
+            ]
+        ]
+    },
+    {
+        "id": "30cd1237a911c4f9",
+        "type": "debug",
+        "z": "f8019f41458984fc",
+        "name": "debug 43",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "f5c05638ebabecdf",
+        "type": "comment",
+        "z": "f8019f41458984fc",
+        "name": "Write data to a specific file",
+        "info": "",
+        "x": 550,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "7d60543d98aecd95",
+        "type": "comment",
+        "z": "f8019f41458984fc",
+        "name": "read data from a specific file",
+        "info": "",
+        "x": 560,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "0dbe7690f2d1b002",
+        "type": "comment",
+        "z": "f8019f41458984fc",
+        "name": "write data to files with name set by variable",
+        "info": "",
+        "x": 560,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "3e5ec89d30e43250",
+        "type": "comment",
+        "z": "f8019f41458984fc",
+        "name": "check directory",
+        "info": "",
+        "x": 520,
+        "y": 620,
+        "wires": []
+    }
+]

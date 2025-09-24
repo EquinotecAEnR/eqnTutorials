@@ -1,0 +1,476 @@
+[
+    {
+        "id": "0bb7c43425e63b41",
+        "type": "tab",
+        "label": "PLC dataL Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f49e697bbfa242be",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "0bb7c43425e63b41",
+        "subscription": "f4fbeb3362ac2a0e",
+        "path": "plc/app/Application/sym/PLC_PRG/boolVar1",
+        "name": "",
+        "x": 370,
+        "y": 180,
+        "wires": [
+            [
+                "dc381e3502b382c4"
+            ]
+        ]
+    },
+    {
+        "id": "553e5406f46f9c32",
+        "type": "debug",
+        "z": "0bb7c43425e63b41",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "8befb56350c046cc",
+        "type": "ctrlx-datalayer-request",
+        "z": "0bb7c43425e63b41",
+        "device": "c5641cd46b23419d",
+        "method": "WRITE",
+        "path": "plc/app/Application/sym/PLC_PRG/boolVar2",
+        "payloadFormat": "value_type",
+        "name": "",
+        "x": 680,
+        "y": 320,
+        "wires": [
+            [
+                "f3eff2cd0ac90cdd"
+            ]
+        ]
+    },
+    {
+        "id": "912b4e46bc457db3",
+        "type": "inject",
+        "z": "0bb7c43425e63b41",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{   \"type\": \"bool8\",    \"value\": true }",
+        "payloadType": "json",
+        "x": 230,
+        "y": 320,
+        "wires": [
+            [
+                "8befb56350c046cc"
+            ]
+        ]
+    },
+    {
+        "id": "f3eff2cd0ac90cdd",
+        "type": "debug",
+        "z": "0bb7c43425e63b41",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "1bbbf59eebdc3eab",
+        "type": "inject",
+        "z": "0bb7c43425e63b41",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{   \"type\": \"bool8\",    \"value\": false }",
+        "payloadType": "json",
+        "x": 230,
+        "y": 380,
+        "wires": [
+            [
+                "8befb56350c046cc"
+            ]
+        ]
+    },
+    {
+        "id": "8a8df7648f077289",
+        "type": "ui_switch",
+        "z": "0bb7c43425e63b41",
+        "name": "",
+        "label": "switch",
+        "tooltip": "",
+        "group": "fe6b740bf0f780ad",
+        "order": 3,
+        "width": 2,
+        "height": 4,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{   \"type\": \"bool8\",    \"value\": true }",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{   \"type\": \"bool8\",    \"value\": false }",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 230,
+        "y": 260,
+        "wires": [
+            [
+                "8befb56350c046cc"
+            ]
+        ]
+    },
+    {
+        "id": "c3723fca018f3836",
+        "type": "ui_chart",
+        "z": "0bb7c43425e63b41",
+        "name": "",
+        "group": "fe6b740bf0f780ad",
+        "order": 4,
+        "width": 9,
+        "height": 4,
+        "label": "Some On/Off Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1130,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bdc3df2d33058e71",
+        "type": "ui_media",
+        "z": "0bb7c43425e63b41",
+        "group": "fe6b740bf0f780ad",
+        "name": "",
+        "width": 24,
+        "height": 6,
+        "order": 9,
+        "category": "Logo",
+        "file": "logo.png",
+        "layout": "center",
+        "showcontrols": true,
+        "loop": true,
+        "onstart": false,
+        "scope": "local",
+        "tooltip": "",
+        "x": 730,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "05856f294ed0f220",
+        "type": "ui_form",
+        "z": "0bb7c43425e63b41",
+        "name": "",
+        "label": "",
+        "group": "fe6b740bf0f780ad",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "options": [
+            {
+                "label": "",
+                "value": "someInputText",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "someInputText": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 230,
+        "y": 440,
+        "wires": [
+            [
+                "8e9ef911fd02d047"
+            ]
+        ]
+    },
+    {
+        "id": "4c60e1f26ac3bb44",
+        "type": "ui_gauge",
+        "z": "0bb7c43425e63b41",
+        "name": "",
+        "group": "fe6b740bf0f780ad",
+        "order": 5,
+        "width": 5,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Counter",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "5",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 820,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "d05dc12dc69ec2c2",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "0bb7c43425e63b41",
+        "subscription": "f4fbeb3362ac2a0e",
+        "path": "plc/app/Application/sym/PLC_PRG/iCounter",
+        "name": "",
+        "x": 470,
+        "y": 700,
+        "wires": [
+            [
+                "4c60e1f26ac3bb44"
+            ]
+        ]
+    },
+    {
+        "id": "aae84a3877650312",
+        "type": "ctrlx-datalayer-request",
+        "z": "0bb7c43425e63b41",
+        "device": "c5641cd46b23419d",
+        "method": "WRITE",
+        "path": "plc/app/Application/sym/PLC_PRG/textVar1",
+        "payloadFormat": "value_type",
+        "name": "",
+        "x": 820,
+        "y": 420,
+        "wires": [
+            [
+                "f3eff2cd0ac90cdd"
+            ]
+        ]
+    },
+    {
+        "id": "3ae2439d0d4a6677",
+        "type": "ui_gauge",
+        "z": "0bb7c43425e63b41",
+        "name": "",
+        "group": "fe6b740bf0f780ad",
+        "order": 2,
+        "width": 5,
+        "height": 4,
+        "gtype": "donut",
+        "title": "Length of Input Text",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 850,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "08b7064771574c1b",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "0bb7c43425e63b41",
+        "subscription": "f4fbeb3362ac2a0e",
+        "path": "plc/app/Application/sym/PLC_PRG/intVar1",
+        "name": "",
+        "x": 460,
+        "y": 600,
+        "wires": [
+            [
+                "3ae2439d0d4a6677"
+            ]
+        ]
+    },
+    {
+        "id": "8e9ef911fd02d047",
+        "type": "function",
+        "z": "0bb7c43425e63b41",
+        "name": "json prep function",
+        "func": "var newMsg = {}\nnewMsg.payload = { \"type\": \"string\", \"value\": msg.payload.someInputText }\nreturn newMsg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 420,
+        "wires": [
+            [
+                "aae84a3877650312"
+            ]
+        ]
+    },
+    {
+        "id": "dc381e3502b382c4",
+        "type": "function",
+        "z": "0bb7c43425e63b41",
+        "name": "bool to Int function",
+        "func": "var newmsg={}\n\nif (msg.payload == false) { newmsg.payload = 0;}\nif (msg.payload == true) { newmsg.payload = 1;}\nreturn newmsg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 180,
+        "wires": [
+            [
+                "c3723fca018f3836",
+                "553e5406f46f9c32"
+            ]
+        ]
+    },
+    {
+        "id": "7c5f60a23954d482",
+        "type": "ui_spacer",
+        "z": "0bb7c43425e63b41",
+        "name": "spacer",
+        "group": "fe6b740bf0f780ad",
+        "order": 6,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "474fe55731fc95c4",
+        "type": "ui_spacer",
+        "z": "0bb7c43425e63b41",
+        "name": "spacer",
+        "group": "fe6b740bf0f780ad",
+        "order": 7,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "649e2e861d593dd9",
+        "type": "ui_spacer",
+        "z": "0bb7c43425e63b41",
+        "name": "spacer",
+        "group": "fe6b740bf0f780ad",
+        "order": 8,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "f4fbeb3362ac2a0e",
+        "type": "ctrlx-config-subscription",
+        "device": "c5641cd46b23419d",
+        "name": "tester",
+        "publishIntervalMs": ""
+    },
+    {
+        "id": "c5641cd46b23419d",
+        "type": "ctrlx-config",
+        "name": "",
+        "hostname": "localhost",
+        "debug": false
+    },
+    {
+        "id": "fe6b740bf0f780ad",
+        "type": "ui_group",
+        "name": "EQN Showing Off",
+        "tab": "09021b13510fcf4e",
+        "order": 1,
+        "disp": true,
+        "width": 24,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "09021b13510fcf4e",
+        "type": "ui_tab",
+        "name": "My Test HMI",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

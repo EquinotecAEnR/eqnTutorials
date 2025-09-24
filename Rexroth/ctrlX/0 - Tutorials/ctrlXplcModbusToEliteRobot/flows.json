@@ -1,0 +1,42 @@
+[
+    {
+        "id": "4d10b42c39ac4c4e",
+        "type": "ui_text",
+        "z": "26e2780ed0076647",
+        "group": "9ed5f89c04a7cea3",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "name": "",
+        "label": "X:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 630,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "9ed5f89c04a7cea3",
+        "type": "ui_group",
+        "name": "RobotControl",
+        "tab": "0e3e52232b001d79",
+        "order": 1,
+        "disp": true,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0e3e52232b001d79",
+        "type": "ui_tab",
+        "name": "Send To Position",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

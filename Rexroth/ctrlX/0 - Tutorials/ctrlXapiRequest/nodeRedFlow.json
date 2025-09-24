@@ -1,0 +1,652 @@
+[
+    {
+        "id": "b1c4a9e3e2f4d7b6",
+        "type": "tab",
+        "label": "ctrlX API",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "d1c6f2f3c4a8a4b9",
+        "type": "inject",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "Trigger Token Request",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 140,
+        "wires": [
+            [
+                "3e1bac07e7374a3d"
+            ]
+        ]
+    },
+    {
+        "id": "8f9b9d4bcd44a2e2",
+        "type": "function",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "Set Token Request",
+        "func": "const url = `http://${msg.topic.address}/identity-manager/api/v1.0/auth/token`;\n\n// Prepare the request headers and body\nmsg.method = \"POST\";\nmsg.url = url;\nmsg.headers = { \"Content-Type\": \"application/json\" };\nmsg.payload = { \"name\": msg.payload.name, \"password\": msg.payload.password };\n\n// Disable SSL verification\nmsg.rejectUnauthorized = false;\n\n\n\n// Send to HTTP Request Node\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1050,
+        "y": 160,
+        "wires": [
+            [
+                "5f4d4f5c8b2f3c7a"
+            ]
+        ]
+    },
+    {
+        "id": "5f4d4f5c8b2f3c7a",
+        "type": "http request",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "Get Token",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1090,
+        "y": 220,
+        "wires": [
+            [
+                "3e2f4c9e7b5a2f8d"
+            ]
+        ]
+    },
+    {
+        "id": "3e2f4c9e7b5a2f8d",
+        "type": "function",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "Extract Token",
+        "func": "if (msg.payload && msg.payload.access_token) {\n    msg.payload = msg.payload.access_token;\n} else {\n    msg.payload = \"Error: Token not found\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 300,
+        "wires": [
+            [
+                "d3e5b6a7f9c4e2b1",
+                "a94ca91203c208e7",
+                "93d248302577c816"
+            ]
+        ]
+    },
+    {
+        "id": "d3e5b6a7f9c4e2b1",
+        "type": "debug",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "Show Token",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1130,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "a4f7c3d2e1b5d9f6",
+        "type": "function",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "Set Variable Request",
+        "func": "// Define the API details\n\n// Prepare the request headers\nmsg.method = \"GET\";\n\nmsg.headers = {\n    \"Authorization\": `Bearer ${msg.payload}`,\n    \"Accept\": \"application/json, text/plain, */*\",\n    \"Content-Type\": \"application/json\"\n};\n\n// Disable SSL verification (if needed)\nmsg.rejectUnauthorized = false;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1700,
+        "y": 240,
+        "wires": [
+            [
+                "c5f9b6d7e2a3f4c8"
+            ]
+        ]
+    },
+    {
+        "id": "c5f9b6d7e2a3f4c8",
+        "type": "http request",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "Get Axis Value",
+        "method": "use",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1760,
+        "y": 300,
+        "wires": [
+            [
+                "d8f4b5e6a7c3f9d2"
+            ]
+        ]
+    },
+    {
+        "id": "d8f4b5e6a7c3f9d2",
+        "type": "function",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "Extract Axis Value",
+        "func": "if (msg.payload) {\n    msg.payload = msg.payload; // Adjust this if the API response has a nested structure\n} else {\n    msg.payload = \"Error: Value not found\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1870,
+        "y": 360,
+        "wires": [
+            [
+                "e9c3d6a7b5f4f8d2",
+                "8d13d1f14ff9fbd1"
+            ]
+        ]
+    },
+    {
+        "id": "e9c3d6a7b5f4f8d2",
+        "type": "debug",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "Show Axis Value",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 2020,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "3e1bac07e7374a3d",
+        "type": "function",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "Set configuration",
+        "func": "//change this\n// Insert Address and authentication\nconst address = \"192.168.1.1\"; // Replace with actual address\nconst user = \"boschrexroth\"; // Replace with actual username\nconst password = \"boschrexroth\"; // Replace with actual password\nconst variablepaths = { \n    \"booleanToAPI\":\"plc/app/Application/sym/my_GVLs/booleanToAPI\",\n    \"stringToAPI\":\"plc/app/Application/sym/my_GVLs/stringToAPI\" \n    }\n\n\n// Dont change this\nmsg.topic = { \"address\": address, \"variables\": variablepaths };\nmsg.payload = { \"name\": user, \"password\": password };\n\n\n// Send to HTTP Request Node\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 140,
+        "wires": [
+            [
+                "8f9b9d4bcd44a2e2"
+            ]
+        ]
+    },
+    {
+        "id": "a94ca91203c208e7",
+        "type": "function",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "Set Variable Name",
+        "func": "// Define the API details\n// Replace with actual variable path:\nconst variable = msg.topic.variables.stringToAPI;\n\n\nconst url = `https://${msg.topic.address}/automation/api/v1.0/${variable}`;\nmsg.url = url;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 300,
+        "wires": [
+            [
+                "a4f7c3d2e1b5d9f6"
+            ]
+        ]
+    },
+    {
+        "id": "24a5cf278c1e4b49",
+        "type": "comment",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "Insert plc adress, authentication and variable paths here",
+        "info": "",
+        "x": 680,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "93d248302577c816",
+        "type": "function",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "Set Variable Name",
+        "func": "// Define the API details\n// Replace with actual variable path:\nconst variable = msg.topic.variables.booleanToAPI; \n\n\n\nconst url = `https://${msg.topic.address}/automation/api/v1.0/${variable}`;\nmsg.url = url;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1410,
+        "y": 240,
+        "wires": [
+            [
+                "a4f7c3d2e1b5d9f6"
+            ]
+        ]
+    },
+    {
+        "id": "011994002e47863c",
+        "type": "comment",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "Setup variable url's",
+        "info": "",
+        "x": 1430,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "94941f86cd3c5eb6",
+        "type": "comment",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "Token Request",
+        "info": "",
+        "x": 1060,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "986c8b3665d00c66",
+        "type": "comment",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "Variable Request",
+        "info": "",
+        "x": 1780,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "d4d5eec2702fd7f7",
+        "type": "ui_button",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "",
+        "group": "82c09d6b03961312",
+        "order": 1,
+        "width": 10,
+        "height": 3,
+        "passthru": false,
+        "label": "button",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 230,
+        "y": 280,
+        "wires": [
+            [
+                "3e1bac07e7374a3d"
+            ]
+        ]
+    },
+    {
+        "id": "f4b9b5d0864b3701",
+        "type": "ui_text",
+        "z": "b1c4a9e3e2f4d7b6",
+        "group": "82c09d6b03961312",
+        "order": 2,
+        "width": 10,
+        "height": 3,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2390,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "8d13d1f14ff9fbd1",
+        "type": "function",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "function 4",
+        "func": "var msgout;\n\nmsgout={\"payload\":msg.payload.value};\n\nreturn msgout;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2200,
+        "y": 140,
+        "wires": [
+            [
+                "f4b9b5d0864b3701",
+                "1ea458afb92e0582"
+            ]
+        ]
+    },
+    {
+        "id": "02ce8bc4f0dd184b",
+        "type": "ui_chart",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "",
+        "group": "82c09d6b03961312",
+        "order": 4,
+        "width": 10,
+        "height": 10,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "1",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2390,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1ea458afb92e0582",
+        "type": "function",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "function 5",
+        "func": "var msgout;\n\nif (msg.payload === true) {\n    msgout = { \"payload\": 1 };\n}\n\nif (msg.payload === false) {\n    msgout = { \"payload\": 0 };\n}\n\nreturn msgout;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2220,
+        "y": 220,
+        "wires": [
+            [
+                "02ce8bc4f0dd184b",
+                "eacd46fad7c4971b"
+            ]
+        ]
+    },
+    {
+        "id": "eacd46fad7c4971b",
+        "type": "debug",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2400,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3f97180cb5b650ef",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 3,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "7ff78af6f2412d45",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 5,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "8a18f92f70486c7b",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 6,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "2c0e8706dae5ddbe",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 7,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "a148ee01ea6385d9",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 8,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "246fbb4ff54adec2",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 9,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "b9204c0da0c18f23",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 10,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "de7d96b2dc3be3a3",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 11,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "47d42a34358e774c",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 12,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "8365b2c4c41d2890",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 13,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "73ecd917844f5d88",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 14,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "fc5520997d73c2aa",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 15,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "c20ec8e89d3b89e7",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 16,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "9cb66d0b7aca3066",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 17,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "750fa93c68f39c9a",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 18,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "3e70f35b461f2133",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 19,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "54af52178c73ee2c",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 20,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "101f5550da5cd3ee",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 21,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "40427a480b30d60b",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 22,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "69394263b47f8601",
+        "type": "ui_spacer",
+        "z": "b1c4a9e3e2f4d7b6",
+        "name": "spacer",
+        "group": "82c09d6b03961312",
+        "order": 23,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "82c09d6b03961312",
+        "type": "ui_group",
+        "name": "API Request",
+        "tab": "ac543ebd39860d1f",
+        "order": 1,
+        "disp": true,
+        "width": 20,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ac543ebd39860d1f",
+        "type": "ui_tab",
+        "name": "ctrlX",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

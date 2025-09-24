@@ -1,0 +1,51 @@
+{
+  "IsSynced": true,
+  "SyncMode": 1,
+  "InSyncWithRuntime": true,
+  "ApplicationType": "plc",
+  "Configuration": "appdata",
+  "Solution": "DefaultSolution",
+  "ControllerGuid": "ac8dfef7-2ba4-4184-8998-98cbb2e7b7a1",
+  "LastChange": 638747894788827476,
+  "MachineName": "DESKTOP-NBS8STG",
+  "UserName": "Luís",
+  "ProjectCompleteFilename": "C:\\Users\\User\\Desktop\\gitProjects\\AutomationRobotics_TutorialsAndNotes\\Automation\\Rexroth\\ctrlXapiRequest\\ctrlXplc\\apiExample.project",
+  "CompilerVersion": {
+    "Major": 3,
+    "Minor": 5,
+    "Build": 19,
+    "Revision": 70,
+    "MajorRevision": 0,
+    "MinorRevision": 70
+  },
+  "OwnVersion": {
+    "Major": 1,
+    "Minor": 2,
+    "Build": 0,
+    "Revision": 0,
+    "MajorRevision": 0,
+    "MinorRevision": 0
+  },
+  "ProductAdditionalFolder": "Default",
+  "ProductProfileName": "ctrlX PLC 2.6.2",
+  "ProductId": "ctrlx-plc-engineering",
+  "ProductVersion": "2.6.4",
+  "ProductVersionText": "PLE-V-0206.4",
+  "SyncModeSave": true,
+  "SyncModeDownload": false,
+  "SyncModeAsk": false,
+  "SyncAfterBootApplication": false,
+  "SyncOnOpen": false,
+  "UserMetaData": {
+    "DESKTOP-NBS8STG:Luís": {
+      "MachineName": "DESKTOP-NBS8STG",
+      "UserName": "Luís",
+      "ProjectCompleteFilename": "C:\\Users\\User\\Desktop\\gitProjects\\AutomationRobotics_TutorialsAndNotes\\Automation\\Rexroth\\ctrlXapiRequest\\ctrlXplc\\apiExample.project"
+    }
+  },
+  "CompileinfoChecksum": null,
+  "SyncDescription": false,
+  "DeviceId": "1001 0081",
+  "DeviceVersion": "2.6.20.0",
+  "UseIoHierachy": true
+}

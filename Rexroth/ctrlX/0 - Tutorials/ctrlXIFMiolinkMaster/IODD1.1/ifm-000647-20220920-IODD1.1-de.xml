@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExternalTextDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.io-link.com/IODD/2010/10" xsi:schemaLocation="http://www.io-link.com/IODD/2010/10 IODD-Primitives1.1.xsd">
+  <DocumentInfo version="V1.3.68.142635" releaseDate="2022-09-20" copyright="Copyright 2022, Builder: 4.7.0.7, Time: 02:02:48" />
+  <Language xml:lang="de">
+    <Text id="TI_ProductName0" value="OMH552" />
+    <Text id="TI_ProductDescr0" value="Optischer Sensor, 50.00...200.00 mm, " />
+    <Text id="TI_VendorText" value="www.ifm.com" />
+    <Text id="TI_VendorUrl" value="www.ifm.com" />
+    <Text id="TI_DeviceFamily" value="OMH" />
+    <Text id="TI_DeviceName" value="OMH552" />
+    <Text id="TI_FunctionTag_Name" value="Anlagenkennzeichen" />
+    <Text id="TI_FunctionTag_Description" value="Möglichkeit ein Gerät mit funktionsspezifischen Informationen zu kennzeichnen." />
+    <Text id="TI_LocationTag_Name" value="Ortskennzeichen" />
+    <Text id="TI_LocationTag_Description" value="Möglichkeit ein Gerät mit ortsspezifischen Informationen zu kennzeichnen." />
+    <Text id="TN_V_CP_ProductURI" value="Produkt-URI" />
+    <Text id="TD_V_CP_ProductURI" value="Stellt eine eindeutige Instanzidentifikation gemäß DIN-SPEC 91406 dar." />
+    <Text id="TN_CP_SystemCommand_LocatorStart" value="Locator Start" />
+    <Text id="TN_CP_SystemCommand_LocatorStop" value="Locator Stop" />
+    <Text id="TI_SysCmd228_Name" value="Reset Zähler auf Null" />
+    <Text id="TI_SysCmd240_Name" value="IO-Link 1.1 Systemtest Kommando 240,  Event 8DFE kommt" />
+    <Text id="TI_SysCmd241_Name" value="IO-Link 1.1 Systemtest Kommando 241,  Event 8DFE geht" />
+    <Text id="TI_SysCmd242_Name" value="IO-Link 1.1 Systemtest Kommando 242,  Event 8DFF kommt" />
+    <Text id="TI_SysCmd243_Name" value="IO-Link 1.1 Systemtest Kommando 243,  Event 8DFF geht" />
+    <Text id="TI_SysCmd64_Name" value="Teach apply" />
+    <Text id="TI_SysCmd79_Name" value="Teach Abbruch" />
+    <Text id="TI_SysCmd75_Name" value="Teach SP1 Hintergrund" />
+    <Text id="TI_SysCmd77_Name" value="Teach SP1 Position" />
+    <Text id="TI_SysCmd65_Name" value="Teach SP1" />
+    <Text id="TI_SysCmd67_Name" value="Teach SP1 TP1" />
+    <Text id="TI_SysCmd68_Name" value="Teach SP1 TP2" />
+    <Text id="TI_SysCmd66_Name" value="Teach SP2" />
+    <Text id="TI_SysCmd69_Name" value="Teach SP2 TP1" />
+    <Text id="TI_SysCmd70_Name" value="Teach SP2 TP2" />
+    <Text id="TI_MDCDescr_Name" value="MDC Descr" />
+    <Text id="TI_MDCDescr_Description" value="Beschreibung des Messdatenkanals." />
+    <Text id="TI_MDCDescrlowerLimit_SV_0" value="5000" />
+    <Text id="TI_MDCDescrlowerLimit_Name" value="lowerLimit" />
+    <Text id="TI_MDCDescrlowerLimit_Descr" value="Minimalwert des Messbereichs" />
+    <Text id="TI_MDCDescrupperLimit_SV_0" value="20000" />
+    <Text id="TI_MDCDescrupperLimit_Name" value="upperLimit" />
+    <Text id="TI_MDCDescrupperLimit_Descr" value="Maximalwert des Messbereichs" />
+    <Text id="TI_MDCDescrunitCode_SV_0" value="m" />
+    <Text id="TI_MDCDescrunitCode_Name" value="unitCode" />
+    <Text id="TI_MDCDescrunitCode_Descr" value="Einheitencode der Messdaten" />
+    <Text id="TI_MDCDescrscale_SV_0" value="-5" />
+    <Text id="TI_MDCDescrscale_Name" value="scale" />
+    <Text id="TI_MDCDescrscale_Descr" value="Exponent zur Basis 10" />
+    <Text id="TI_FILT_Name" value="FILT" />
+    <Text id="TI_FILT_Description" value="Filter oder Ansprechzeit des Messignals. LOW für schnelle, HIGH für langsame Ansprechzeit der Filters." />
+    <Text id="TI_FILT_SV_0" value="OFF" />
+    <Text id="TI_FILT_SV_1" value="LOW" />
+    <Text id="TI_FILT_SV_2" value="MEdI" />
+    <Text id="TI_FILT_SV_3" value="HIGH" />
+    <Text id="TI_Hi_Name" value="Hi" />
+    <Text id="TI_Hi_Description" value="Maximalwertspeicher." />
+    <Text id="TI_Internal_Temperature_Name" value="Interne Temperatur" />
+    <Text id="TI_Internal_Temperature_Description" value="Aktuelle interne Temperatur." />
+    <Text id="TI_Lo_Name" value="Lo" />
+    <Text id="TI_Lo_Description" value="Minimalwertspeicher." />
+    <Text id="TI_Loc_Name" value="Loc" />
+    <Text id="TI_Loc_Description" value="[Loc] verriegelt die Sensorbedienung zum Schutz vor ungewollter Verstellung. [Loc] kann am Gerät zurückgesetzt werden." />
+    <Text id="TI_Loc_SV_0" value="Loc" />
+    <Text id="TI_Loc_SV_1" value="uLoc" />
+    <Text id="TI_ModE_Name" value="ModE" />
+    <Text id="TI_ModE_Description" value="Betriebsmodus." />
+    <Text id="TI_ModE_SV_0" value="Standard" />
+    <Text id="TI_ModE_SV_1" value="Power" />
+    <Text id="TI_ModE_SV_2" value="Speed" />
+    <Text id="TI_Number_Of_Powercycles_Name" value="Einschaltvorgänge" />
+    <Text id="TI_Number_Of_Powercycles_Description" value="Anzahl der Einschaltvorgänge seit Auslieferung." />
+    <Text id="TI_Operating_Hours_Name" value="Betriebsstunden" />
+    <Text id="TI_Operating_Hours_Description" value="Betriebsstundenzähler seit Auslieferung." />
+    <Text id="TI_P-n_Name" value="P-n" />
+    <Text id="TI_P-n_Description" value="Ausgangspolarität der Schaltausgänge." />
+    <Text id="TI_P-n_SV_0" value="PnP" />
+    <Text id="TI_P-n_SV_1" value="nPn" />
+    <Text id="TI_Reflectivity_Name" value="Object Reflectivity" />
+    <Text id="TI_Reflectivity_Description" value="Reflektivität des Objekts." />
+    <Text id="TI_SSC1-1-ConfigLogic_SV_0" value="High active" />
+    <Text id="TI_SSC1-1-ConfigLogic_SV_1" value="Low active" />
+    <Text id="TI_SSC1-1-ConfigMode_SV_0" value="Deactivated" />
+    <Text id="TI_SSC1-1-ConfigMode_SV_1" value="Single point" />
+    <Text id="TI_SSC1-1-ConfigMode_SV_2" value="Window" />
+    <Text id="TI_SSC1-1-ConfigMode_SV_3" value="Two point" />
+    <Text id="TI_SSC1-2-ConfigLogic_SV_0" value="High active" />
+    <Text id="TI_SSC1-2-ConfigLogic_SV_1" value="Low active" />
+    <Text id="TI_SSC1-2-ConfigMode_SV_0" value="Deactivated" />
+    <Text id="TI_SSC1-2-ConfigMode_SV_1" value="Single point" />
+    <Text id="TI_SSC1-2-ConfigMode_SV_2" value="Window" />
+    <Text id="TI_SSC1-2-ConfigMode_SV_3" value="Two point" />
+    <Text id="TI_SSC1_CNT_Name" value="SSC1.1 Zähler" />
+    <Text id="TI_SSC1_CNT_Description" value="Schaltkanal 1.1, Schaltzähler" />
+    <Text id="TI_SSC1_dS_Name" value="SSC1.1 Einschaltverzögerung" />
+    <Text id="TI_SSC1_dS_Description" value="Schaltkanal 1.1, Einschaltverzögerung" />
+    <Text id="TI_SSC1_dr_Name" value="SSC1.1 Ausschaltverzögerung" />
+    <Text id="TI_SSC1_dr_Description" value="Schaltkanal 1.1, Ausschaltverzögerung" />
+    <Text id="TI_SSC2_CNT_Name" value="SSC1.2 Zähler" />
+    <Text id="TI_SSC2_CNT_Description" value="Schaltkanal 1.2, Schaltzähler" />
+    <Text id="TI_SSC2_dS_Name" value="SSC1.2 Einschaltverzögerung" />
+    <Text id="TI_SSC2_dS_Description" value="Schaltkanal 1.2, Einschaltverzögerung" />
+    <Text id="TI_SSC2_dr_Name" value="SSC1.2 Ausschaltverzögerung" />
+    <Text id="TI_SSC2_dr_Description" value="Schaltkanal 1.2, Ausschaltverzögerung" />
+    <Text id="TI_TI-Result_Name" value="TI Result" />
+    <Text id="TI_TI-Result_Description" value="Teach Ergebnis." />
+    <Text id="TI_TI-ResultState_SV_0" value="Idle" />
+    <Text id="TI_TI-ResultState_SV_1" value="SP1 Success" />
+    <Text id="TI_TI-ResultState_SV_2" value="SP2 Success" />
+    <Text id="TI_TI-ResultState_SV_3" value="SP12 Success" />
+    <Text id="TI_TI-ResultState_SV_4" value="Wait for command" />
+    <Text id="TI_TI-ResultState_SV_5" value="Busy" />
+    <Text id="TI_TI-ResultState_SV_6" value="Error" />
+    <Text id="TI_TI-ResultState_Name" value="State" />
+    <Text id="TI_TI-ResultState_Descr" value="Aktueller Teachstatus" />
+    <Text id="TI_TI-Select_Name" value="TI Select" />
+    <Text id="TI_TI-Select_Description" value="Teach Auswahl." />
+    <Text id="TI_TI-Select_SV_0" value="SSC1.1" />
+    <Text id="TI_TI-Select_SV_1" value="SSC1.2" />
+    <Text id="TI_Transmitter_Configuration_Name" value="Transmitter configuration" />
+    <Text id="TI_Transmitter_Configuration_Description" value="Einstellung zum Aktivieren und Deaktivieren der Sendeeinheit." />
+    <Text id="TI_Transmitter_Configuration_SV_0" value="OFF / Aus" />
+    <Text id="TI_Transmitter_Configuration_SV_1" value="On / Ein" />
+    <Text id="TI_Transmitter_Configuration_SV_2" value="On_ExtActive / Einschalten mit externem Signal aktiv" />
+    <Text id="TI_Transmitter_Configuration_SV_3" value="PDOut / Gesteuert durch PDOut" />
+    <Text id="TI_ou2_Name" value="ou2" />
+    <Text id="TI_ou2_Description" value="Ausgangskonfiguration [OUT 2]." />
+    <Text id="TI_ou2_SV_0" value="OFF / Ausgang Aus" />
+    <Text id="TI_ou2_SV_1" value="SSC1.2" />
+    <Text id="TI_ParaConfigFault_Name" value="Parameter Einstellungsfehler" />
+    <Text id="TI_ParaConfigFault_Descr" value="Zeigt den zum Downloadzeitpunkt fehlerhaft eingestellten Parameter an." />
+    <Text id="TI_ParaConfigFaultCollection_SV_0" value="OK" />
+    <Text id="TI_ParaConfigFaultCollection_SV_1" value="Gerätezugriffssperren, Index = 12" />
+    <Text id="TI_ParaConfigFaultCollection_SV_2" value="FILT, Index = 515" />
+    <Text id="TI_ParaConfigFaultCollection_SV_3" value="Loc, Index = 550" />
+    <Text id="TI_ParaConfigFaultCollection_SV_4" value="ModE, Index = 684" />
+    <Text id="TI_ParaConfigFaultCollection_SV_5" value="P-n, Index = 500" />
+    <Text id="TI_ParaConfigFaultCollection_SV_6" value="SSC1.1 Config, Index = 61" />
+    <Text id="TI_ParaConfigFaultCollection_SV_7" value="SSC1.1 Config, Index = 61, Subindex = 1" />
+    <Text id="TI_ParaConfigFaultCollection_SV_8" value="SSC1.1 Config, Index = 61, Subindex = 2" />
+    <Text id="TI_ParaConfigFaultCollection_SV_9" value="SSC1.1 Config, Index = 61, Subindex = 3" />
+    <Text id="TI_ParaConfigFaultCollection_SV_10" value="SSC1.1 Param, Index = 60" />
+    <Text id="TI_ParaConfigFaultCollection_SV_11" value="SSC1.1 Param, Index = 60, Subindex = 1" />
+    <Text id="TI_ParaConfigFaultCollection_SV_12" value="SSC1.1 Param, Index = 60, Subindex = 2" />
+    <Text id="TI_ParaConfigFaultCollection_SV_13" value="SSC1.2 Config, Index = 63" />
+    <Text id="TI_ParaConfigFaultCollection_SV_14" value="SSC1.2 Config, Index = 63, Subindex = 1" />
+    <Text id="TI_ParaConfigFaultCollection_SV_15" value="SSC1.2 Config, Index = 63, Subindex = 2" />
+    <Text id="TI_ParaConfigFaultCollection_SV_16" value="SSC1.2 Config, Index = 63, Subindex = 3" />
+    <Text id="TI_ParaConfigFaultCollection_SV_17" value="SSC1.2 Param, Index = 62" />
+    <Text id="TI_ParaConfigFaultCollection_SV_18" value="SSC1.2 Param, Index = 62, Subindex = 1" />
+    <Text id="TI_ParaConfigFaultCollection_SV_19" value="SSC1.2 Param, Index = 62, Subindex = 2" />
+    <Text id="TI_ParaConfigFaultCollection_SV_20" value="SSC1.1 Einschaltverzögerung, Index = 370" />
+    <Text id="TI_ParaConfigFaultCollection_SV_21" value="SSC1.1 Ausschaltverzögerung, Index = 371" />
+    <Text id="TI_ParaConfigFaultCollection_SV_22" value="SSC1.2 Einschaltverzögerung, Index = 372" />
+    <Text id="TI_ParaConfigFaultCollection_SV_23" value="SSC1.2 Ausschaltverzögerung, Index = 373" />
+    <Text id="TI_ParaConfigFaultCollection_SV_24" value="TI Select, Index = 58" />
+    <Text id="TI_ParaConfigFaultCollection_SV_25" value="Transmitter configuration, Index = 2000" />
+    <Text id="TI_ParaConfigFaultCollection_SV_26" value="ou2, Index = 590" />
+    <Text id="TI_BitCoded_ActiveEvents_Name" value="Aktive Events" />
+    <Text id="TI_BitCoded_ActiveEvents_Description" value="Bitmaske für aktuell anstehende Events." />
+    <Text id="TI_BitCoded_ActiveEventsBit_10_SV_0" value="noEv" />
+    <Text id="TI_BitCoded_ActiveEventsBit_10_SV_1" value="0x8CB0" />
+    <Text id="TI_BitCoded_ActiveEventsBit_10_Name" value="Bit_10" />
+    <Text id="TI_BitCoded_ActiveEventsBit_10_Descr" value="NEAR - Objekt zu nah am Sensor. Gerätestatus = 2 (Außerhalb der Spezifikation)" />
+    <Text id="TI_BitCoded_ActiveEventsBit_11_SV_0" value="noEv" />
+    <Text id="TI_BitCoded_ActiveEventsBit_11_SV_1" value="0x8CB1" />
+    <Text id="TI_BitCoded_ActiveEventsBit_11_Name" value="Bit_11" />
+    <Text id="TI_BitCoded_ActiveEventsBit_11_Descr" value="FAR - Objekt zu fern vom Sensor. Gerätestatus = 2 (Außerhalb der Spezifikation)" />
+    <Text id="TI_BitCoded_ActiveEventsBit_14_SV_0" value="noEv" />
+    <Text id="TI_BitCoded_ActiveEventsBit_14_SV_1" value="0x4220" />
+    <Text id="TI_BitCoded_ActiveEventsBit_14_Name" value="Bit_14" />
+    <Text id="TI_BitCoded_ActiveEventsBit_14_Descr" value="Zulässige Gerätetemperatur unterschritten" />
+    <Text id="TI_BitCoded_ActiveEventsBit_15_SV_0" value="noEv" />
+    <Text id="TI_BitCoded_ActiveEventsBit_15_SV_1" value="0x4210" />
+    <Text id="TI_BitCoded_ActiveEventsBit_15_Name" value="Bit_15" />
+    <Text id="TI_BitCoded_ActiveEventsBit_15_Descr" value="Zulässige Gerätetemperatur überschritten" />
+    <Text id="TI_BitCoded_ActiveEventsBit_18_SV_0" value="noEv" />
+    <Text id="TI_BitCoded_ActiveEventsBit_18_SV_1" value="0x8CD8" />
+    <Text id="TI_BitCoded_ActiveEventsBit_18_Name" value="Bit_18" />
+    <Text id="TI_BitCoded_ActiveEventsBit_18_Descr" value="Überbelichtung. Gerätestatus = 2 (Außerhalb der Spezifikation)" />
+    <Text id="TI_BitCoded_ActiveEventsBit_19_SV_0" value="noEv" />
+    <Text id="TI_BitCoded_ActiveEventsBit_19_SV_1" value="0x8CD9" />
+    <Text id="TI_BitCoded_ActiveEventsBit_19_Name" value="Bit_19" />
+    <Text id="TI_BitCoded_ActiveEventsBit_19_Descr" value="Unterbelichtung. Gerätestatus = 2 (Außerhalb der Spezifikation)" />
+    <Text id="TI_BitCoded_ActiveEventsBit_30_SV_0" value="noEv" />
+    <Text id="TI_BitCoded_ActiveEventsBit_30_SV_1" value="0x8DFE" />
+    <Text id="TI_BitCoded_ActiveEventsBit_30_Name" value="Bit_30" />
+    <Text id="TI_BitCoded_ActiveEventsBit_30_Descr" value="Test Event 1. Gerätestatus = 1 (Wartung erforderlich)" />
+    <Text id="TI_BitCoded_ActiveEventsBit_31_SV_0" value="noEv" />
+    <Text id="TI_BitCoded_ActiveEventsBit_31_SV_1" value="0x8DFF" />
+    <Text id="TI_BitCoded_ActiveEventsBit_31_Name" value="Bit_31" />
+    <Text id="TI_BitCoded_ActiveEventsBit_31_Descr" value="Test Event 2. Gerätestatus = 1 (Wartung erforderlich)" />
+    <Text id="TI_PD_VR_IN_1_Name" value="Distanz" />
+    <Text id="TI_PD_VR_IN_1_Descr" value="Aktuelle Distanz des Objekts" />
+    <Text id="TI_PD_AddBinVal_Sidx1_0" value="UL" />
+    <Text id="TI_PD_AddBinVal_Sidx1_1" value="OL" />
+    <Text id="TI_PD_AddBinVal_Sidx1_2" value="NoData" />
+    <Text id="TI_PD_SV_IN_2_Name" value="Gerätestatus" />
+    <Text id="TI_PD_SV_IN_2_Descr" value="Aktueller Gerätestatus, eine Kopie des Parameters [Gerätestatus, Index 36] im Prozessdatenkanal" />
+    <Text id="TI_PD_DevStat0" value="Gerät ist OK" />
+    <Text id="TI_PD_DevStat1" value="Wartung erforderlich" />
+    <Text id="TI_PD_DevStat2" value="Außerhalb der Spezifikation" />
+    <Text id="TI_PD_DevStat3" value="Funktionsprüfung" />
+    <Text id="TI_PD_DevStat4" value="Ausfall" />
+    <Text id="TI_PD_SV_IN_3_Name" value="SSC1.2" />
+    <Text id="TI_PD_IN_SV_3_true" value="On" />
+    <Text id="TI_PD_IN_SV_3_false" value="OFF" />
+    <Text id="TI_PD_SV_IN_3_Descr" value="Aktueller Zustand des digitalen Signals [SSC1.2]" />
+    <Text id="TI_PD_SV_IN_4_Name" value="SSC1.1" />
+    <Text id="TI_PD_IN_SV_4_true" value="On" />
+    <Text id="TI_PD_IN_SV_4_false" value="OFF" />
+    <Text id="TI_PD_SV_IN_4_Descr" value="Aktueller Zustand des digitalen Signals [SSC1.1]" />
+    <Text id="TI_PdIn_Name" value="Prozessdaten Eingang/Ausgang" />
+    <Text id="TI_PD_SV_OUT_1_Name" value="Transducer disable" />
+    <Text id="TI_PD_OUT_SV_1_true" value="deaktiviert" />
+    <Text id="TI_PD_OUT_SV_1_false" value="aktiviert" />
+    <Text id="TI_PD_SV_OUT_1_Descr" value="Setzt das digitale Signal [Transducer disable]" />
+    <Text id="TI_PdOut_Name" value="Prozessdaten Eingang/Ausgang" />
+    <Text id="TI_Ev_8CB0_Name" value="NEAR - Objekt zu nah am Sensor. Gerätestatus = 2 (Außerhalb der Spezifikation)" />
+    <Text id="TI_Ev_8CB0_Descr" value="Das Gerät kann noch messen - jedoch außerhalb der Datenblatt-Spezifikation" />
+    <Text id="TI_Ev_8CB1_Name" value="FAR - Objekt zu fern vom Sensor. Gerätestatus = 2 (Außerhalb der Spezifikation)" />
+    <Text id="TI_Ev_8CB1_Descr" value="Das Gerät kann noch messen - jedoch außerhalb der Datenblatt-Spezifikation" />
+    <Text id="TI_Ev_8CD8_Name" value="Überbelichtung. Gerätestatus = 2 (Außerhalb der Spezifikation)" />
+    <Text id="TI_Ev_8CD8_Descr" value="Überprüfen Sie Ihre Applikation" />
+    <Text id="TI_Ev_8CD9_Name" value="Unterbelichtung. Gerätestatus = 2 (Außerhalb der Spezifikation)" />
+    <Text id="TI_Ev_8CD9_Descr" value="Überprüfen Sie Ihre Applikation" />
+    <Text id="TI_Ev_8DFE_Name" value="Test Event 1. Gerätestatus = 1 (Wartung erforderlich)" />
+    <Text id="TI_Ev_8DFE_Descr" value="Event kommt bei Setzen von Index 2 auf den Wert 240, Event geht bei Setzen von Index 2 auf den Wert 241" />
+    <Text id="TI_Ev_8DFF_Name" value="Test Event 2. Gerätestatus = 1 (Wartung erforderlich)" />
+    <Text id="TI_Ev_8DFF_Descr" value="Event kommt bei Setzen von Index 2 auf den Wert 242, Event geht bei Setzen von Index 2 auf den Wert 243" />
+    <Text id="TD_STD_SystemCommand_ApplicationReset" value="Die Parameter der technologiespezifischen Anwendung werden auf Standardwerte gesetzt. Identifikationsparameter bleiben unverändert. Ein Upload in den Datenspeicher des Masters wird ausgeführt, sofern in der Portkonfiguration des Masters aktiviert." />
+    <Text id="TD_STD_SystemCommand_BackToBox" value="Die Parameter des Geräts werden auf die Werkseinstellungen gesetzt und die Kommunikation wird bis zum nächsten Aus- und Einschalten gesperrt. Hinweis: Trennen Sie das Gerät direkt vom Master-Port!" />
+    <Text id="TD_CP_SystemCommand_LocatorStart" value="Die visuellen Anzeigen des Geräts werden auf das Lokalisierungsanzeigemuster umgeschaltet, wodurch das Erkennen eines Geräts in einer Anwendung erleichtert wird." xmlns="http://www.io-link.com/IODD/2010/10" />
+    <Text id="TD_CP_SystemCommand_LocatorStop" value="Das Lokalisierungsanzeigemuster wird gestoppt. Die optischen Anzeigen des Geräts zeigen wieder die gerätespezifischen Betriebszustände an." xmlns="http://www.io-link.com/IODD/2010/10" />
+    <Text id="TI_M_BasicSettings_Name" value="Grundeinstellungen" />
+    <Text id="TI_M_Setup_Name" value="Weitere Einstellungen" />
+    <Text id="TI_M_MDC1_Name" value="Messdatenkanal 1" />
+    <Text id="TI_M_SSC11_Deac_Name" value="SSC1.1 deaktiviert" />
+    <Text id="TI_M_SSC11_1P_Name" value="SSC1.1 Single point" />
+    <Text id="TI_M_SSC11_2P_Name" value="SSC1.1 Two point" />
+    <Text id="TI_M_SSC11_Window_Name" value="SSC1.1 Window" />
+    <Text id="TI_M_SSC12_Deac_Name" value="SSC1.2 deaktiviert" />
+    <Text id="TI_M_SSC12_1P_Name" value="SSC1.2 Single point" />
+    <Text id="TI_M_SSC12_2P_Name" value="SSC1.2 Two point" />
+    <Text id="TI_M_SSC12_Window_Name" value="SSC1.2 Window" />
+    <Text id="TI_M_Diagnosis_Name" value="Diagnose" />
+    <Text id="TI_M_TEMP_Name" value="Temperatur" />
+    <Text id="TI_M_Signal_Name" value="Signal" />
+    <Text id="TI_M_Memory_Name" value="Speicher" />
+    <Text id="TI_M_Teach_Name" value="Teachen" />
+    <Text id="TI_M_Digital_Output1_Name" value="Digitaler Ausgang 1" />
+    <Text id="TI_M_Digital_Output2_Name" value="Digitaler Ausgang 2" />
+    <Text id="TI_M_Counter_Name" value="Zählerkonfiguration" />
+    <Text id="TI_M_Output_Configuration_Name" value="Ausgangskonfiguration" />
+    <Text id="TI_M_Display_Name" value="Anzeigeeinstellung" />
+    <Text id="TI_M_Observation" value="Prozessdaten Eingang/Ausgang" />
+    <Text id="TI_M_DIST_Name" value="Distanz" />
+    <Text id="TI_OtherConnection0" value="M12-5 / 1=[L+]  2=[Out]  3=[L-]  4=[C/Q]  5=[In]" />
+    <Text id="TI_LPLUS" value="L+" />
+    <Text id="TI_LMINUS" value="L-" />
+    <Text id="TI_CQ" value="C/Q" />
+  </Language>
+  <Stamp crc="3615013531"><Checker name="IODD-Checker V1.1.9" version="V1.1.9.0"/></Stamp>
+</ExternalTextDocument>

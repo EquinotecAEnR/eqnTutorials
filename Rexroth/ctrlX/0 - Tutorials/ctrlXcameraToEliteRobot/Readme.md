@@ -1,0 +1,1 @@
+## Note: For Modbus in the Elite EC robot a lua script must be added to set the register values into robot variables

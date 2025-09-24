@@ -1,0 +1,2729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2016 rel. 2 sp1 (x64) (http://www.altova.com) by ifm electronic gmbh (ifm electronic gmbh) -->
+<EtherCATModule Version="1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="EtherCATModule.xsd">
+	<Vendor>
+		<Id>#x00000622</Id>
+		<Name>ifm electronic</Name>
+		<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000251600002516000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFF888FFFFFFFFFF89999998FFFFFFF8999999998FFFFF899999999998FFFF988989898989FFFF998989898989FFF89989898989898FF89889899888898FFF939988999999FFFF733989999999FFFFF3999899999FFFFFF8988899998FFFFFFFF899998FFFFFFFFFFFFFFFFFFFFF</ImageData16x14>
+	</Vendor>
+	<Modules>
+		<!-- ************************************************************************************* -->
+		<!-- *************************** Module for empty Slot ************ -->
+		<!-- ************************************************************************************* -->
+		<Module>
+			<Type ModuleIdent="#x1000">Deactivated</Type>
+			<Name>Deactivate Slot (no DS clear)</Name>
+			<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x22</SubIndex>
+						<Data>00</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x24</SubIndex>
+						<Data>00</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x25</SubIndex>
+						<Data>00</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x28</SubIndex>
+						<Data>0000</Data>
+						<Comment></Comment>
+					</InitCmd>
+				</CoE>
+			</Mailbox>
+			<Profile>
+				<ProfileNo>5001</ProfileNo>
+				<AddInfo>6220</AddInfo>
+			</Profile>
+			<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000251600002516000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFF888FFFFFFFFFF89999998FFFFFFF8999999998FFFFF899999999998FFFF988989898989FFFF998989898989FFF89989898989898FF89889899888898FFF939988999999FFFF733989999999FFFFF3999899999FFFFFF8988899998FFFFFFFF899998FFFFFFFFFFFFFFFFFFFFF</ImageData16x14>
+		</Module>
+		<!-- ************************************************************************************* -->
+		<!-- *************************** Beginn of Status/Control and Digital Modules ************ -->
+		<!-- ************************************************************************************* -->
+		<Module>
+			<Type ModuleIdent="#x1001">Digital_IN</Type>
+			<Name>Digital Input</Name>
+			<TxPdo Sm="3">
+				<Index DependOnSlot="true">#x1a00</Index>
+				<Name>TxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</TxPdo>
+			<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x22</SubIndex>
+						<Data>00</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x24</SubIndex>
+						<Data>01</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x25</SubIndex>
+						<Data>00</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x28</SubIndex>
+						<Data>0100</Data>
+						<Comment></Comment>
+					</InitCmd>
+				</CoE>
+			</Mailbox>
+			<Profile>
+				<ProfileNo>5001</ProfileNo>
+				<AddInfo>6220</AddInfo>
+			</Profile>
+			<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000251600002516000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFF888FFFFFFFFFF89999998FFFFFFF8999999998FFFFF899999999998FFFF988989898989FFFF998989898989FFF89989898989898FF89889899888898FFF939988999999FFFF733989999999FFFFF3999899999FFFFFF8988899998FFFFFFFF899998FFFFFFFFFFFFFFFFFFFFF</ImageData16x14>
+		</Module>
+		<Module>
+			<Type ModuleIdent="#x1002">Digital_OUT</Type>
+			<Name>Digital Output</Name>
+			<RxPdo Sm="2">
+				<Index DependOnSlot="true">#x1600</Index>
+				<Name>RxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</RxPdo>
+			<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x22</SubIndex>
+						<Data>00</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x24</SubIndex>
+						<Data>00</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x25</SubIndex>
+						<Data>01</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x28</SubIndex>
+						<Data>0200</Data>
+						<Comment></Comment>
+					</InitCmd>
+				</CoE>
+			</Mailbox>
+			<Profile>
+				<ProfileNo>5001</ProfileNo>
+				<AddInfo>6220</AddInfo>
+			</Profile>
+			<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000251600002516000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFF888FFFFFFFFFF89999998FFFFFFF8999999998FFFFF899999999998FFFF988989898989FFFF998989898989FFF89989898989898FF89889899888898FFF939988999999FFFF733989999999FFFFF3999899999FFFFFF8988899998FFFFFFFF899998FFFFFFFFFFFFFFFFFFFFF</ImageData16x14>
+		</Module>
+		<!-- ********************************************************************************** -->
+		<!-- *************************** Beginn of IOL Input Modules ************************** -->
+		<!-- ********************************************************************************** -->
+		<Module>
+			<Type ModuleIdent="#x1104">IOL_In_4Byte</Type>
+			<Name>IO-Link  Input 04 Byte Process Data</Name>
+			<TxPdo Sm="3">
+				<Index DependOnSlot="true">#x1a00</Index>
+				<Name>TxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</TxPdo>
+			<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x24</SubIndex>
+						<Data>83</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x25</SubIndex>
+						<Data>00</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x28</SubIndex>
+						<Data>0300</Data>
+						<Comment></Comment>
+					</InitCmd>
+				</CoE>
+			</Mailbox>
+			<Profile>
+				<ProfileNo>5001</ProfileNo>
+				<AddInfo>6220</AddInfo>
+			</Profile>
+			<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000C40E0000C40E000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFFFFFFFFFFF777777FFFFFFFF7777777777FFFFF7777777F7777FFFF777777FFF777FFF777777F777F777FF77777F77777F77FF77777777777777FF77F77777F77777FF777F777F777777FFF777FFF777777FFFF7777F7777777FFFFF7777777777FFFFFFFF777777FFFFF</ImageData16x14>
+		</Module>
+		<Module>
+			<Type ModuleIdent="#x1106">IOL_In_8Byte</Type>
+			<Name>IO-Link  Input 08 Byte Process Data</Name>
+			<TxPdo Sm="3">
+				<Index DependOnSlot="true">#x1a00</Index>
+				<Name>TxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>5</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 4</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>6</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 5</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>7</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 6</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>8</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 7</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</TxPdo>
+			<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x24</SubIndex>
+						<Data>87</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x25</SubIndex>
+						<Data>00</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x28</SubIndex>
+						<Data>0300</Data>
+						<Comment></Comment>
+					</InitCmd>
+				</CoE>
+			</Mailbox>
+			<Profile>
+				<ProfileNo>5001</ProfileNo>
+				<AddInfo>6220</AddInfo>
+			</Profile>
+			<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000C40E0000C40E000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFFFFFFFFFFF777777FFFFFFFF7777777777FFFFF7777777F7777FFFF777777FFF777FFF777777F777F777FF77777F77777F77FF77777777777777FF77F77777F77777FF777F777F777777FFF777FFF777777FFFF7777F7777777FFFFF7777777777FFFFFFFF777777FFFFF</ImageData16x14>
+		</Module>
+		<Module>
+			<Type ModuleIdent="#x1108">IOL_In_16Byte</Type>
+			<Name>IO-Link  Input 16 Byte Process Data</Name>
+			<TxPdo Sm="3">
+				<Index DependOnSlot="true">#x1a00</Index>
+				<Name>TxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>5</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 4</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>6</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 5</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>7</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 6</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>8</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 7</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>9</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 8</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>10</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 9</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>11</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 10</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>12</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 11</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>13</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 12</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>14</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 13</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>15</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 14</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>16</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 15</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</TxPdo>
+			<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x24</SubIndex>
+						<Data>8F</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x25</SubIndex>
+						<Data>00</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x28</SubIndex>
+						<Data>0300</Data>
+						<Comment></Comment>
+					</InitCmd>
+				</CoE>
+			</Mailbox>
+			<Profile>
+				<ProfileNo>5001</ProfileNo>
+				<AddInfo>6220</AddInfo>
+			</Profile>
+			<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000C40E0000C40E000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFFFFFFFFFFF777777FFFFFFFF7777777777FFFFF7777777F7777FFFF777777FFF777FFF777777F777F777FF77777F77777F77FF77777777777777FF77F77777F77777FF777F777F777777FFF777FFF777777FFFF7777F7777777FFFFF7777777777FFFFFFFF777777FFFFF</ImageData16x14>
+		</Module>
+		<Module>
+			<Type ModuleIdent="#x110A">IOL_In_32Byte</Type>
+			<Name>IO-Link  Input 32 Byte Process Data</Name>
+			<TxPdo Sm="3">
+				<Index DependOnSlot="true">#x1a00</Index>
+				<Name>TxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>5</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 4</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>6</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 5</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>7</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 6</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>8</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 7</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>9</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 8</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>10</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 9</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>11</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 10</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>12</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 11</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>13</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 12</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>14</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 13</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>15</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 14</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>16</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 15</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>17</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 16</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>18</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 17</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>19</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 18</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>20</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 19</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>21</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 20</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>22</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 21</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>23</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 22</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>24</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 23</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>25</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 24</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>26</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 25</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>27</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 26</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>28</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 27</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>29</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 28</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>30</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 29</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>31</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 30</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>32</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 31</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</TxPdo>
+			<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x24</SubIndex>
+						<Data>9F</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x25</SubIndex>
+						<Data>00</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x28</SubIndex>
+						<Data>0300</Data>
+						<Comment></Comment>
+					</InitCmd>
+				</CoE>
+			</Mailbox>
+			<Profile>
+				<ProfileNo>5001</ProfileNo>
+				<AddInfo>6220</AddInfo>
+			</Profile>
+			<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000C40E0000C40E000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFFFFFFFFFFF777777FFFFFFFF7777777777FFFFF7777777F7777FFFF777777FFF777FFF777777F777F777FF77777F77777F77FF77777777777777FF77F77777F77777FF777F777F777777FFF777FFF777777FFFF7777F7777777FFFFF7777777777FFFFFFFF777777FFFFF</ImageData16x14>
+		</Module>
+		<!-- ******************************************************************************** -->
+		<!-- **************************  Beginn of IOL Output Modules *********************** -->
+		<!-- ******************************************************************************** -->
+		<Module>
+			<Type ModuleIdent="#x1204">IOL_Out_4Byte</Type>
+			<Name>IO-Link  Output 04 Byte Process Data</Name>
+			<RxPdo Sm="2">
+				<Index DependOnSlot="true">#x1600</Index>
+				<Name>RxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</RxPdo>
+			<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x24</SubIndex>
+						<Data>00</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x25</SubIndex>
+						<Data>83</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x28</SubIndex>
+						<Data>0300</Data>
+						<Comment></Comment>
+					</InitCmd>
+				</CoE>
+			</Mailbox>
+			<Profile>
+				<ProfileNo>5001</ProfileNo>
+				<AddInfo>6220</AddInfo>
+			</Profile>
+			<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000C40E0000C40E000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFFFFFFFFFFF777777FFFFFFFF7777777777FFFFF7777777F7777FFFF777777FFF777FFF777777F777F777FF77777F77777F77FF77777777777777FF77F77777F77777FF777F777F777777FFF777FFF777777FFFF7777F7777777FFFFF7777777777FFFFFFFF777777FFFFF</ImageData16x14>
+		</Module>
+		<Module>
+			<Type ModuleIdent="#x1206">IOL_Out_8Byte</Type>
+			<Name>IO-Link  Output 08 Byte Process Data</Name>
+			<RxPdo Sm="2">
+				<Index DependOnSlot="true">#x1600</Index>
+				<Name>RxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>5</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 4</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>6</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 5</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>7</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 6</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>8</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 7</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</RxPdo>
+			<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x24</SubIndex>
+						<Data>00</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x25</SubIndex>
+						<Data>87</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x28</SubIndex>
+						<Data>0300</Data>
+						<Comment></Comment>
+					</InitCmd>
+				</CoE>
+			</Mailbox>
+			<Profile>
+				<ProfileNo>5001</ProfileNo>
+				<AddInfo>6220</AddInfo>
+			</Profile>
+			<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000C40E0000C40E000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFFFFFFFFFFF777777FFFFFFFF7777777777FFFFF7777777F7777FFFF777777FFF777FFF777777F777F777FF77777F77777F77FF77777777777777FF77F77777F77777FF777F777F777777FFF777FFF777777FFFF7777F7777777FFFFF7777777777FFFFFFFF777777FFFFF</ImageData16x14>
+		</Module>
+		<Module>
+			<Type ModuleIdent="#x1208">IOL_Out_16Byte</Type>
+			<Name>IO-Link  Output 16 Byte Process Data</Name>
+			<RxPdo Sm="2">
+				<Index DependOnSlot="true">#x1600</Index>
+				<Name>RxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>5</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 4</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>6</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 5</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>7</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 6</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>8</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 7</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>9</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 8</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>10</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 9</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>11</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 10</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>12</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 11</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>13</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 12</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>14</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 13</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>15</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 14</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>16</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 15</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</RxPdo>
+			<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x24</SubIndex>
+						<Data>00</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x25</SubIndex>
+						<Data>8F</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x28</SubIndex>
+						<Data>0300</Data>
+						<Comment></Comment>
+					</InitCmd>
+				</CoE>
+			</Mailbox>
+			<Profile>
+				<ProfileNo>5001</ProfileNo>
+				<AddInfo>6220</AddInfo>
+			</Profile>
+			<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000C40E0000C40E000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFFFFFFFFFFF777777FFFFFFFF7777777777FFFFF7777777F7777FFFF777777FFF777FFF777777F777F777FF77777F77777F77FF77777777777777FF77F77777F77777FF777F777F777777FFF777FFF777777FFFF7777F7777777FFFFF7777777777FFFFFFFF777777FFFFF</ImageData16x14>
+		</Module>
+		<Module>
+			<Type ModuleIdent="#x120A">IOL_Out_32Byte</Type>
+			<Name>IO-Link  Output 32 Byte Process Data</Name>
+			<RxPdo Sm="2">
+				<Index DependOnSlot="true">#x1600</Index>
+				<Name>RxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>5</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 4</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>6</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 5</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>7</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 6</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>8</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 7</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>9</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 8</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>10</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 9</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>11</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 10</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>12</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 11</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>13</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 12</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>14</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 13</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>15</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 14</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>16</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 15</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>17</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 16</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>18</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 17</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>19</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 18</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>20</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 19</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>21</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 20</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>22</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 21</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>23</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 22</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>24</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 23</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>25</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 24</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>26</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 25</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>27</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 26</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>28</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 27</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>29</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 28</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>30</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 29</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>31</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 30</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>32</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 31</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</RxPdo>
+			<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x24</SubIndex>
+						<Data>00</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x25</SubIndex>
+						<Data>9F</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x28</SubIndex>
+						<Data>0300</Data>
+						<Comment></Comment>
+					</InitCmd>
+				</CoE>
+			</Mailbox>
+			<Profile>
+				<ProfileNo>5001</ProfileNo>
+				<AddInfo>6220</AddInfo>
+			</Profile>
+			<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000C40E0000C40E000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFFFFFFFFFFF777777FFFFFFFF7777777777FFFFF7777777F7777FFFF777777FFF777FFF777777F777F777FF77777F77777F77FF77777777777777FF77F77777F77777FF777F777F777777FFF777FFF777777FFFF7777F7777777FFFFF7777777777FFFFFFFF777777FFFFF</ImageData16x14>
+		</Module>
+		<!-- ****************************************************************************** -->
+		<!-- *************************** Beginn of Mixed Modules ************************** -->
+		<!-- ****************************************************************************** -->
+		<Module>
+			<Type ModuleIdent="#x1305">IOL_4/4_I/O-Bytes</Type>
+			<Name>IO-Link Mix 04 Byte Input / 04 Byte Output Process Data</Name>
+			<RxPdo Sm="2">
+				<Index DependOnSlot="true">#x1600</Index>
+				<Name>RxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</RxPdo>
+			<TxPdo Sm="3">
+				<Index DependOnSlot="true">#x1A00</Index>
+				<Name>TxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</TxPdo>
+			<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x24</SubIndex>
+						<Data>83</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x25</SubIndex>
+						<Data>83</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x28</SubIndex>
+						<Data>0300</Data>
+						<Comment></Comment>
+					</InitCmd>
+				</CoE>
+			</Mailbox>
+			<Profile>
+				<ProfileNo>5001</ProfileNo>
+				<AddInfo>6220</AddInfo>
+			</Profile>
+			<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000C40E0000C40E000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFFFFFFFFFFF777777FFFFFFFF7777777777FFFFF7777777F7777FFFF777777FFF777FFF777777F777F777FF77777F77777F77FF77777777777777FF77F77777F77777FF777F777F777777FFF777FFF777777FFFF7777F7777777FFFFF7777777777FFFFFFFF777777FFFFF</ImageData16x14>
+		</Module>
+		<Module>
+			<Type ModuleIdent="#x130B">IOL_8/8_I/O-Bytes</Type>
+			<Name>IO-Link Mix 08 Byte Input / 08 Byte Output Process Data</Name>
+			<RxPdo Sm="2">
+				<Index DependOnSlot="true">#x1600</Index>
+				<Name>RxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>5</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 4</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>6</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 5</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>7</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 6</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>8</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 7</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</RxPdo>
+			<TxPdo Sm="3">
+				<Index DependOnSlot="true">#x1A00</Index>
+				<Name>TxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>5</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 4</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>6</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 5</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>7</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 6</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>8</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 7</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</TxPdo>
+			<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x24</SubIndex>
+						<Data>87</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x25</SubIndex>
+						<Data>87</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x28</SubIndex>
+						<Data>0300</Data>
+						<Comment></Comment>
+					</InitCmd>
+				</CoE>
+			</Mailbox>
+			<Profile>
+				<ProfileNo>5001</ProfileNo>
+				<AddInfo>6220</AddInfo>
+			</Profile>
+			<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000C40E0000C40E000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFFFFFFFFFFF777777FFFFFFFF7777777777FFFFF7777777F7777FFFF777777FFF777FFF777777F777F777FF77777F77777F77FF77777777777777FF77F77777F77777FF777F777F777777FFF777FFF777777FFFF7777F7777777FFFFF7777777777FFFFFFFF777777FFFFF</ImageData16x14>
+		</Module>
+		<Module>
+			<Type ModuleIdent="#x130C">IOL_4/16_I/O-Bytes</Type>
+			<Name>IO-Link Mix 04 Byte Input / 16 Byte Output Process Data</Name>
+			<RxPdo Sm="2">
+				<Index DependOnSlot="true">#x1600</Index>
+				<Name>RxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>5</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 4</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>6</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 5</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>7</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 6</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>8</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 7</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>9</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 8</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>10</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 9</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>11</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 10</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>12</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 11</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>13</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 12</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>14</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 13</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>15</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 14</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>16</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 15</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</RxPdo>
+			<TxPdo Sm="3">
+				<Index DependOnSlot="true">#x1A00</Index>
+				<Name>TxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</TxPdo>
+			<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x24</SubIndex>
+						<Data>83</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x25</SubIndex>
+						<Data>8F</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x28</SubIndex>
+						<Data>0300</Data>
+						<Comment></Comment>
+					</InitCmd>
+				</CoE>
+			</Mailbox>
+			<Profile>
+				<ProfileNo>5001</ProfileNo>
+				<AddInfo>6220</AddInfo>
+			</Profile>
+			<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000C40E0000C40E000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFFFFFFFFFFF777777FFFFFFFF7777777777FFFFF7777777F7777FFFF777777FFF777FFF777777F777F777FF77777F77777F77FF77777777777777FF77F77777F77777FF777F777F777777FFF777FFF777777FFFF7777F7777777FFFFF7777777777FFFFFFFF777777FFFFF</ImageData16x14>
+		</Module>
+		<Module>
+			<Type ModuleIdent="#x130D">IOL_16/4_I/O-Bytes</Type>
+			<Name>IO-Link Mix 16 Byte Input / 04 Byte Output Process Data</Name>
+			<RxPdo Sm="2">
+				<Index DependOnSlot="true">#x1600</Index>
+				<Name>RxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</RxPdo>
+			<TxPdo Sm="3">
+				<Index DependOnSlot="true">#x1A00</Index>
+				<Name>TxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>5</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 4</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>6</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 5</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>7</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 6</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>8</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 7</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>9</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 8</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>10</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 9</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>11</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 10</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>12</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 11</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>13</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 12</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>14</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 13</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>15</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 14</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>16</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 15</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</TxPdo>
+			<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x24</SubIndex>
+						<Data>8F</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x25</SubIndex>
+						<Data>83</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x28</SubIndex>
+						<Data>0300</Data>
+						<Comment></Comment>
+					</InitCmd>
+				</CoE>
+			</Mailbox>
+			<Profile>
+				<ProfileNo>5001</ProfileNo>
+				<AddInfo>6220</AddInfo>
+			</Profile>
+			<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000C40E0000C40E000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFFFFFFFFFFF777777FFFFFFFF7777777777FFFFF7777777F7777FFFF777777FFF777FFF777777F777F777FF77777F77777F77FF77777777777777FF77F77777F77777FF777F777F777777FFF777FFF777777FFFF7777F7777777FFFFF7777777777FFFFFFFF777777FFFFF</ImageData16x14>
+		</Module>
+		<Module>
+			<Type ModuleIdent="#x130E">IOL_16/16_I/O-Bytes</Type>
+			<Name>IO-Link Mix 16 Byte Input / 16 Byte Output Process Data</Name>
+			<RxPdo Sm="2">
+				<Index DependOnSlot="true">#x1600</Index>
+				<Name>RxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>5</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 4</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>6</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 5</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>7</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 6</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>8</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 7</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>9</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 8</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>10</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 9</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>11</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 10</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>12</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 11</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>13</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 12</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>14</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 13</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>15</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 14</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>16</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 15</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</RxPdo>
+			<TxPdo Sm="3">
+				<Index DependOnSlot="true">#x1A00</Index>
+				<Name>TxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>5</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 4</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>6</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 5</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>7</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 6</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>8</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 7</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>9</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 8</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>10</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 9</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>11</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 10</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>12</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 11</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>13</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 12</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>14</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 13</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>15</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 14</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>16</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 15</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</TxPdo>
+			<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x24</SubIndex>
+						<Data>8F</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x25</SubIndex>
+						<Data>8F</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x28</SubIndex>
+						<Data>0300</Data>
+						<Comment></Comment>
+					</InitCmd>
+				</CoE>
+			</Mailbox>
+			<Profile>
+				<ProfileNo>5001</ProfileNo>
+				<AddInfo>6220</AddInfo>
+			</Profile>
+			<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000C40E0000C40E000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFFFFFFFFFFF777777FFFFFFFF7777777777FFFFF7777777F7777FFFF777777FFF777FFF777777F777F777FF77777F77777F77FF77777777777777FF77F77777F77777FF777F777F777777FFF777FFF777777FFFF7777F7777777FFFFF7777777777FFFFFFFF777777FFFFF</ImageData16x14>
+		</Module>
+		<Module>
+			<Type ModuleIdent="#x1312">IOL_32/32_I/O-Bytes</Type>
+			<Name>IO-Link Mix 32 Byte Input / 32 Byte Output Process Data</Name>
+			<RxPdo Sm="2">
+				<Index DependOnSlot="true">#x1600</Index>
+				<Name>RxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>5</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 4</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>6</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 5</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>7</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 6</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>8</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 7</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>9</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 8</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>10</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 9</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>11</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 10</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>12</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 11</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>13</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 12</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>14</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 13</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>15</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 14</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>16</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 15</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>17</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 16</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>18</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 17</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>19</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 18</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>20</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 19</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>21</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 20</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>22</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 21</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>23</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 22</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>24</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 23</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>25</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 24</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>26</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 25</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>27</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 26</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>28</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 27</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>29</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 28</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>30</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 29</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>31</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 30</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x7000</Index>
+					<SubIndex>32</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>output byte 31</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</RxPdo>
+			<TxPdo Sm="3">
+				<Index DependOnSlot="true">#x1A00</Index>
+				<Name>TxPDO</Name>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>1</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 0</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>2</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 1</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>3</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 2</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>4</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 3</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>5</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 4</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>6</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 5</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>7</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 6</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>8</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 7</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>9</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 8</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>10</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 9</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>11</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 10</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>12</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 11</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>13</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 12</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>14</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 13</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>15</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 14</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>16</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 15</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>17</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 16</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>18</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 17</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>19</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 18</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>20</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 19</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>21</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 20</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>22</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 21</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>23</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 22</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>24</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 23</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>25</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 24</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>26</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 25</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>27</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 26</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>28</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 27</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>29</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 28</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>30</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 29</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>31</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 30</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+				<Entry>
+					<Index DependOnSlot="true">#x6000</Index>
+					<SubIndex>32</SubIndex>
+					<BitLen>8</BitLen>
+					<Name>input byte 31</Name>
+					<DataType>USINT</DataType>
+				</Entry>
+			</TxPdo>
+			<Mailbox>
+				<CoE>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x24</SubIndex>
+						<Data>9F</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x25</SubIndex>
+						<Data>9F</Data>
+						<Comment></Comment>
+					</InitCmd>
+					<InitCmd>
+						<Transition><![CDATA[PS]]></Transition>
+						<Index DependOnSlot="true">#x8000</Index>
+						<SubIndex>#x28</SubIndex>
+						<Data>0300</Data>
+						<Comment></Comment>
+					</InitCmd>
+				</CoE>
+			</Mailbox>
+			<Profile>
+				<ProfileNo>5001</ProfileNo>
+				<AddInfo>6220</AddInfo>
+			</Profile>
+			<ImageData16x14>424DE6000000000000007600000028000000100000000E000000010004000000000070000000C40E0000C40E000000000000000000000000000000008000008000000080800080000000800080008080000080808000C0C0C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFFFFFFFFFFF777777FFFFFFFF7777777777FFFFF7777777F7777FFFF777777FFF777FFF777777F777F777FF77777F77777F77FF77777777777777FF77F77777F77777FF777F777F777777FFF777FFF777777FFFF7777F7777777FFFFF7777777777FFFFFFFF777777FFFFF</ImageData16x14>
+		</Module>
+	</Modules>
+</EtherCATModule>

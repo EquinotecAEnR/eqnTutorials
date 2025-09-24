@@ -1,0 +1,1 @@
+WriteFormatString( TcpC77P5025, "R=[MS.Result%s] X=[PX%s] Y=[PY%s]\n\r")

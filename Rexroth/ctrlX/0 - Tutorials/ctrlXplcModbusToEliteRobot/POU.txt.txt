@@ -1,0 +1,51 @@
+PROGRAM PLC_PRG
+VAR
+	moveStart:BOOL:= FALSE;
+	
+	xStart:INT:= 540;
+	yStart:INT:= 140;
+	zStart:INT:= 600;
+	
+	xInc:INT:= 0;
+	yInc:INT:= 0;
+	zInc:INT:= 0;
+	
+	xPoseCommand:INT:=0;
+	yPoseCommand:INT:=0;
+	zPoseCommand:INT:=0;
+	rxPoseCommand:INT:=0;
+	ryPoseCommand:INT:=0;
+	rzPoseCommand:INT:=0;
+
+	joint1:INT:=0;
+	joint2:INT:=0;
+	joint3:INT:=0;
+	joint4:INT:=0;
+	joint5:INT:=0;
+	joint6:INT:=0;
+	
+	xRobot:INT:=0;
+	yRobot:INT:=0;
+	zRobot:INT:=0;
+	rxRobot:INT:=0;
+	ryRobot:INT:=0;
+	rzRobot:INT:=0;
+	
+	tcpXprocess:REAL;
+	tcpYprocess:REAL;
+	tcpZprocess:REAL;
+	
+	iCounter: REAL;
+END_VAR
+
+
+
+IF  NOT moveStart THEN
+	xPoseCommand:=xStart+xInc;
+	yPoseCommand:=yStart+yInc;
+	zPoseCommand:=zStart+zInc;
+END_IF
+
+tcpXprocess:=xRobot/10;
+tcpYprocess:=yRobot/10;
+tcpZprocess:=zRobot/10

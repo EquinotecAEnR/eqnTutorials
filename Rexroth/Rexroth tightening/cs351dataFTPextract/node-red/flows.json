@@ -1,0 +1,52 @@
+[
+    {
+        "id": "9ba5713c5d7f9b04",
+        "type": "ftp-server",
+        "z": "ed70755a4092087e",
+        "name": "",
+        "ip": "192.168.1.1",
+        "port": "21",
+        "passiveportrange": "",
+        "x": 220,
+        "y": 120,
+        "wires": [
+            [
+                "8877d8dca83b34ca"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "fd962944e49caa9d",
+        "type": "debug",
+        "z": "ed70755a4092087e",
+        "name": "debug 45",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "8877d8dca83b34ca",
+        "type": "json",
+        "z": "ed70755a4092087e",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 470,
+        "y": 200,
+        "wires": [
+            [
+                "fd962944e49caa9d"
+            ]
+        ]
+    }
+]

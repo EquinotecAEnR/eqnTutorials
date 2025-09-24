@@ -1,0 +1,1054 @@
+{
+  "Name": "vcTester1",
+  "IconName": null,
+  "EcadId": "",
+  "TypeName": "_3S.CoDeSys.DeviceObject.DeviceObject",
+  "Type": 4096,
+  "Id": "1001 0080",
+  "ModuleId": null,
+  "Version": "2.6.20.0",
+  "ObjectGuid": "e1f299de-427e-4713-b3e9-c18ac3d94bcc",
+  "SlotIndex": 0,
+  "Inputs": null,
+  "Outputs": null,
+  "StructuralItems": [
+    {
+      "Name": "PLC Logic",
+      "IconName": null,
+      "EcadId": null,
+      "TypeName": "_3S.CoDeSys.PlcLogicObject.PlcLogicObject",
+      "Type": 0,
+      "Id": null,
+      "ModuleId": null,
+      "Version": null,
+      "ObjectGuid": "75d850d9-e46b-41b5-a2e1-b1489c8bb496",
+      "SlotIndex": 0,
+      "Inputs": null,
+      "Outputs": null,
+      "StructuralItems": [
+        {
+          "Name": "Application",
+          "IconName": null,
+          "EcadId": null,
+          "TypeName": "_3S.CoDeSys.ApplicationObject.ApplicationObject",
+          "Type": 0,
+          "Id": null,
+          "ModuleId": null,
+          "Version": null,
+          "ObjectGuid": "6003f128-4f16-4d24-843a-09a28c5c21be",
+          "SlotIndex": 0,
+          "Inputs": null,
+          "Outputs": null,
+          "StructuralItems": [
+            {
+              "Name": "Library Manager",
+              "IconName": null,
+              "EcadId": null,
+              "TypeName": "_3S.CoDeSys.LibManObject.LibManObject",
+              "Type": 0,
+              "Id": null,
+              "ModuleId": null,
+              "Version": null,
+              "ObjectGuid": "c068569d-fe48-4ce3-99db-1aa52f1393bc",
+              "SlotIndex": 0,
+              "Inputs": null,
+              "Outputs": null,
+              "StructuralItems": []
+            },
+            {
+              "Name": "PLC",
+              "IconName": null,
+              "EcadId": null,
+              "TypeName": "_3S.CoDeSys.DefaultNavigators.FolderObject",
+              "Type": 0,
+              "Id": null,
+              "ModuleId": null,
+              "Version": null,
+              "ObjectGuid": "5a967d95-f36f-4d2c-8be5-93e359ad71ea",
+              "SlotIndex": 0,
+              "Inputs": null,
+              "Outputs": null,
+              "StructuralItems": [
+                {
+                  "Name": "PLC_PRG",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.POUObject.POUObject",
+                  "Type": 0,
+                  "Id": null,
+                  "ModuleId": null,
+                  "Version": null,
+                  "ObjectGuid": "7c137a53-01af-4c22-9905-f0faf693846d",
+                  "SlotIndex": 0,
+                  "Inputs": null,
+                  "Outputs": null,
+                  "StructuralItems": []
+                },
+                {
+                  "Name": "PLCAUX_PRG",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.POUObject.POUObject",
+                  "Type": 0,
+                  "Id": null,
+                  "ModuleId": null,
+                  "Version": null,
+                  "ObjectGuid": "3771e6e5-442d-4216-b9a2-3d1e64ee52ad",
+                  "SlotIndex": 0,
+                  "Inputs": null,
+                  "Outputs": null,
+                  "StructuralItems": []
+                },
+                {
+                  "Name": "PLC_CASCADEOUT_PRG",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.POUObject.POUObject",
+                  "Type": 0,
+                  "Id": null,
+                  "ModuleId": null,
+                  "Version": null,
+                  "ObjectGuid": "b2d187cf-67d7-4d38-9c5f-11a300bacbb3",
+                  "SlotIndex": 0,
+                  "Inputs": null,
+                  "Outputs": null,
+                  "StructuralItems": []
+                }
+              ]
+            },
+            {
+              "Name": "Task Configuration",
+              "IconName": null,
+              "EcadId": null,
+              "TypeName": "_3S.CoDeSys.TaskConfigObject.TaskConfigObject",
+              "Type": 0,
+              "Id": null,
+              "ModuleId": null,
+              "Version": null,
+              "ObjectGuid": "8d659fca-2535-46a6-8162-43fe4eb7ad28",
+              "SlotIndex": 0,
+              "Inputs": null,
+              "Outputs": null,
+              "StructuralItems": [
+                {
+                  "Name": "MainTask",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.TaskObject.TaskObject",
+                  "Type": 0,
+                  "Id": null,
+                  "ModuleId": null,
+                  "Version": null,
+                  "ObjectGuid": "e1de1486-3f48-4ebc-b994-1fd8fa381b9d",
+                  "SlotIndex": 0,
+                  "Inputs": null,
+                  "Outputs": null,
+                  "StructuralItems": [
+                    {
+                      "Name": "PLC_PRG",
+                      "IconName": null,
+                      "EcadId": null,
+                      "TypeName": "_3S.CoDeSys.TaskObject.TaskPOUCallObject",
+                      "Type": 0,
+                      "Id": null,
+                      "ModuleId": null,
+                      "Version": null,
+                      "ObjectGuid": "064672c4-0424-49b0-a415-4d5529f67a6f",
+                      "SlotIndex": 0,
+                      "Inputs": null,
+                      "Outputs": null,
+                      "StructuralItems": []
+                    },
+                    {
+                      "Name": "PLCAUX_PRG",
+                      "IconName": null,
+                      "EcadId": null,
+                      "TypeName": "_3S.CoDeSys.TaskObject.TaskPOUCallObject",
+                      "Type": 0,
+                      "Id": null,
+                      "ModuleId": null,
+                      "Version": null,
+                      "ObjectGuid": "05e05365-58a2-4515-9e6f-d271c896e81d",
+                      "SlotIndex": 0,
+                      "Inputs": null,
+                      "Outputs": null,
+                      "StructuralItems": []
+                    },
+                    {
+                      "Name": "PLC_CASCADEOUT_PRG",
+                      "IconName": null,
+                      "EcadId": null,
+                      "TypeName": "_3S.CoDeSys.TaskObject.TaskPOUCallObject",
+                      "Type": 0,
+                      "Id": null,
+                      "ModuleId": null,
+                      "Version": null,
+                      "ObjectGuid": "5b71e004-9323-4e4f-8317-cbc3362d4ac0",
+                      "SlotIndex": 0,
+                      "Inputs": null,
+                      "Outputs": null,
+                      "StructuralItems": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Name": "Symbol Configuration",
+              "IconName": null,
+              "EcadId": null,
+              "TypeName": "_3S.CoDeSys.SymbolConfigObject.SymbolConfigObject",
+              "Type": 0,
+              "Id": null,
+              "ModuleId": null,
+              "Version": null,
+              "ObjectGuid": "cd652eec-8a91-4a9a-9c03-9e4309d96fc9",
+              "SlotIndex": 0,
+              "Inputs": null,
+              "Outputs": null,
+              "StructuralItems": []
+            },
+            {
+              "Name": "CheckFunctions",
+              "IconName": null,
+              "EcadId": null,
+              "TypeName": "_3S.CoDeSys.DefaultNavigators.FolderObject",
+              "Type": 0,
+              "Id": null,
+              "ModuleId": null,
+              "Version": null,
+              "ObjectGuid": "c75cfcd8-a595-40d0-aecb-3c12461d54b3",
+              "SlotIndex": 0,
+              "Inputs": null,
+              "Outputs": null,
+              "StructuralItems": [
+                {
+                  "Name": "CheckBounds",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.POUObject.POUObjectCheckFunction",
+                  "Type": 0,
+                  "Id": null,
+                  "ModuleId": null,
+                  "Version": null,
+                  "ObjectGuid": "5c57242d-0abc-44e9-a367-983e29473911",
+                  "SlotIndex": 0,
+                  "Inputs": null,
+                  "Outputs": null,
+                  "StructuralItems": []
+                },
+                {
+                  "Name": "CheckDivDInt",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.POUObject.POUObject",
+                  "Type": 0,
+                  "Id": null,
+                  "ModuleId": null,
+                  "Version": null,
+                  "ObjectGuid": "58c0f176-f4bb-46bb-8dab-1ed03dd53ad8",
+                  "SlotIndex": 0,
+                  "Inputs": null,
+                  "Outputs": null,
+                  "StructuralItems": []
+                },
+                {
+                  "Name": "CheckDivLInt",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.POUObject.POUObject",
+                  "Type": 0,
+                  "Id": null,
+                  "ModuleId": null,
+                  "Version": null,
+                  "ObjectGuid": "609648a1-2e58-455b-9c4e-d880496e9f4a",
+                  "SlotIndex": 0,
+                  "Inputs": null,
+                  "Outputs": null,
+                  "StructuralItems": []
+                },
+                {
+                  "Name": "CheckDivLReal",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.POUObject.POUObject",
+                  "Type": 0,
+                  "Id": null,
+                  "ModuleId": null,
+                  "Version": null,
+                  "ObjectGuid": "9803d488-e75a-4e11-a200-6e673d6e224f",
+                  "SlotIndex": 0,
+                  "Inputs": null,
+                  "Outputs": null,
+                  "StructuralItems": []
+                },
+                {
+                  "Name": "CheckDivReal",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.POUObject.POUObject",
+                  "Type": 0,
+                  "Id": null,
+                  "ModuleId": null,
+                  "Version": null,
+                  "ObjectGuid": "eeb3df6d-e42d-4119-9c95-6f1833bef139",
+                  "SlotIndex": 0,
+                  "Inputs": null,
+                  "Outputs": null,
+                  "StructuralItems": []
+                },
+                {
+                  "Name": "CheckLRangeSigned",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.POUObject.POUObject",
+                  "Type": 0,
+                  "Id": null,
+                  "ModuleId": null,
+                  "Version": null,
+                  "ObjectGuid": "8ef16baf-6c68-4fe0-b526-10ef481f2fe5",
+                  "SlotIndex": 0,
+                  "Inputs": null,
+                  "Outputs": null,
+                  "StructuralItems": []
+                },
+                {
+                  "Name": "CheckLRangeUnsigned",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.POUObject.POUObject",
+                  "Type": 0,
+                  "Id": null,
+                  "ModuleId": null,
+                  "Version": null,
+                  "ObjectGuid": "521ddf74-7d27-4f28-a796-a061adfdde45",
+                  "SlotIndex": 0,
+                  "Inputs": null,
+                  "Outputs": null,
+                  "StructuralItems": []
+                },
+                {
+                  "Name": "CheckPointer",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.POUObject.POUObjectCheckFunction",
+                  "Type": 0,
+                  "Id": null,
+                  "ModuleId": null,
+                  "Version": null,
+                  "ObjectGuid": "5958a7c4-4190-4632-9e8d-a0514bb4166b",
+                  "SlotIndex": 0,
+                  "Inputs": null,
+                  "Outputs": null,
+                  "StructuralItems": []
+                },
+                {
+                  "Name": "CheckRangeSigned",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.POUObject.POUObject",
+                  "Type": 0,
+                  "Id": null,
+                  "ModuleId": null,
+                  "Version": null,
+                  "ObjectGuid": "6003db3f-7c51-4503-b0d5-21bc7b4782e5",
+                  "SlotIndex": 0,
+                  "Inputs": null,
+                  "Outputs": null,
+                  "StructuralItems": []
+                },
+                {
+                  "Name": "CheckRangeUnsigned",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.POUObject.POUObject",
+                  "Type": 0,
+                  "Id": null,
+                  "ModuleId": null,
+                  "Version": null,
+                  "ObjectGuid": "ec010e8d-bce5-4419-adff-2749696bf6d1",
+                  "SlotIndex": 0,
+                  "Inputs": null,
+                  "Outputs": null,
+                  "StructuralItems": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "Realtime_Data",
+      "IconName": null,
+      "EcadId": null,
+      "TypeName": "_3S.CoDeSys.DeviceObject.DeviceObject",
+      "Type": 42420,
+      "Id": "1001 0000",
+      "ModuleId": null,
+      "Version": "1.8.0.0",
+      "ObjectGuid": "f58eeed9-3269-4eea-913a-749bafc10ded",
+      "SlotIndex": 0,
+      "Inputs": null,
+      "Outputs": null,
+      "StructuralItems": [
+        {
+          "Name": "ethercat_master_instances_ethercatmaster",
+          "IconName": null,
+          "EcadId": null,
+          "TypeName": "_3S.CoDeSys.DeviceObject.DeviceObject",
+          "Type": 42430,
+          "Id": "1001 0000",
+          "ModuleId": null,
+          "Version": "1.8.0.0",
+          "ObjectGuid": "6c661894-e6c6-4c39-995e-3252a12b2357",
+          "SlotIndex": 0,
+          "Inputs": null,
+          "Outputs": null,
+          "StructuralItems": [
+            {
+              "Name": "XB_EC_12",
+              "IconName": null,
+              "EcadId": null,
+              "TypeName": "_3S.CoDeSys.DeviceObject.DeviceObject",
+              "Type": 42450,
+              "Id": "1001 0000",
+              "ModuleId": null,
+              "Version": "1.8.0.0",
+              "ObjectGuid": "e11820e4-2297-42e0-b4c4-6092ff92edbb",
+              "SlotIndex": 0,
+              "Inputs": [
+                {
+                  "Id": 2952855568,
+                  "Name": "",
+                  "IecAddress": "%IW0",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855569,
+                  "Name": "",
+                  "IecAddress": "%IW2",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855570,
+                  "Name": "",
+                  "IecAddress": "%IW4",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855571,
+                  "Name": "",
+                  "IecAddress": "%IW6",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855572,
+                  "Name": "",
+                  "IecAddress": "%IX8.0",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855573,
+                  "Name": "",
+                  "IecAddress": "%IX8.1",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855574,
+                  "Name": "",
+                  "IecAddress": "%IX8.2",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855575,
+                  "Name": "",
+                  "IecAddress": "%IX8.3",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855576,
+                  "Name": "",
+                  "IecAddress": "%IX8.4",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855577,
+                  "Name": "",
+                  "IecAddress": "%IX8.5",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855578,
+                  "Name": "",
+                  "IecAddress": "%IX8.6",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855579,
+                  "Name": "",
+                  "IecAddress": "%IX8.7",
+                  "Description": "",
+                  "Descriptions": []
+                }
+              ],
+              "Outputs": null,
+              "StructuralItems": [
+                {
+                  "Name": "XF71",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.DeviceObject.DeviceObject",
+                  "Type": 42450,
+                  "Id": "1001 0000",
+                  "ModuleId": null,
+                  "Version": "1.8.0.0",
+                  "ObjectGuid": "f4e4f8b7-5989-4a9b-bfbd-427bdeb8ccc7",
+                  "SlotIndex": 0,
+                  "Inputs": null,
+                  "Outputs": null,
+                  "StructuralItems": [
+                    {
+                      "Name": "XI110208",
+                      "IconName": null,
+                      "EcadId": null,
+                      "TypeName": "_3S.CoDeSys.DeviceObject.DeviceObject",
+                      "Type": 42450,
+                      "Id": "1001 0000",
+                      "ModuleId": null,
+                      "Version": "1.8.0.0",
+                      "ObjectGuid": "5466fed8-1499-4ccb-8782-3516940788b8",
+                      "SlotIndex": 0,
+                      "Inputs": [
+                        {
+                          "Id": 2952855568,
+                          "Name": "",
+                          "IecAddress": "%IX9.0",
+                          "Description": "",
+                          "Descriptions": []
+                        },
+                        {
+                          "Id": 2952855569,
+                          "Name": "",
+                          "IecAddress": "%IX9.1",
+                          "Description": "",
+                          "Descriptions": []
+                        },
+                        {
+                          "Id": 2952855570,
+                          "Name": "",
+                          "IecAddress": "%IX9.2",
+                          "Description": "",
+                          "Descriptions": []
+                        },
+                        {
+                          "Id": 2952855571,
+                          "Name": "",
+                          "IecAddress": "%IX9.3",
+                          "Description": "",
+                          "Descriptions": []
+                        },
+                        {
+                          "Id": 2952855572,
+                          "Name": "",
+                          "IecAddress": "%IX9.4",
+                          "Description": "",
+                          "Descriptions": []
+                        },
+                        {
+                          "Id": 2952855573,
+                          "Name": "",
+                          "IecAddress": "%IX9.5",
+                          "Description": "",
+                          "Descriptions": []
+                        },
+                        {
+                          "Id": 2952855574,
+                          "Name": "",
+                          "IecAddress": "%IX9.6",
+                          "Description": "",
+                          "Descriptions": []
+                        },
+                        {
+                          "Id": 2952855575,
+                          "Name": "",
+                          "IecAddress": "%IX9.7",
+                          "Description": "",
+                          "Descriptions": []
+                        }
+                      ],
+                      "Outputs": null,
+                      "StructuralItems": []
+                    },
+                    {
+                      "Name": "XI211208",
+                      "IconName": null,
+                      "EcadId": null,
+                      "TypeName": "_3S.CoDeSys.DeviceObject.DeviceObject",
+                      "Type": 42450,
+                      "Id": "1001 0000",
+                      "ModuleId": null,
+                      "Version": "1.8.0.0",
+                      "ObjectGuid": "c2d84356-9138-4fbc-8d7e-2558690a995b",
+                      "SlotIndex": 0,
+                      "Inputs": null,
+                      "Outputs": [
+                        {
+                          "Id": 2952921104,
+                          "Name": "",
+                          "IecAddress": "%QX0.0",
+                          "Description": "",
+                          "Descriptions": null
+                        },
+                        {
+                          "Id": 2952921105,
+                          "Name": "",
+                          "IecAddress": "%QX0.1",
+                          "Description": "",
+                          "Descriptions": null
+                        },
+                        {
+                          "Id": 2952921106,
+                          "Name": "",
+                          "IecAddress": "%QX0.2",
+                          "Description": "",
+                          "Descriptions": null
+                        },
+                        {
+                          "Id": 2952921107,
+                          "Name": "",
+                          "IecAddress": "%QX0.3",
+                          "Description": "",
+                          "Descriptions": null
+                        },
+                        {
+                          "Id": 2952921108,
+                          "Name": "",
+                          "IecAddress": "%QX0.4",
+                          "Description": "",
+                          "Descriptions": null
+                        },
+                        {
+                          "Id": 2952921109,
+                          "Name": "",
+                          "IecAddress": "%QX0.5",
+                          "Description": "",
+                          "Descriptions": null
+                        },
+                        {
+                          "Id": 2952921110,
+                          "Name": "",
+                          "IecAddress": "%QX0.6",
+                          "Description": "",
+                          "Descriptions": null
+                        },
+                        {
+                          "Id": 2952921111,
+                          "Name": "",
+                          "IecAddress": "%QX0.7",
+                          "Description": "",
+                          "Descriptions": null
+                        }
+                      ],
+                      "StructuralItems": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Name": "ifm_IO_Link_Master_AL1330",
+              "IconName": null,
+              "EcadId": null,
+              "TypeName": "_3S.CoDeSys.DeviceObject.DeviceObject",
+              "Type": 42450,
+              "Id": "1001 0000",
+              "ModuleId": null,
+              "Version": "1.8.0.0",
+              "ObjectGuid": "f8023a95-a2e6-4836-bca1-55b836e3def3",
+              "SlotIndex": 0,
+              "Inputs": [
+                {
+                  "Id": 2952855568,
+                  "Name": "",
+                  "IecAddress": "%IB16",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855569,
+                  "Name": "",
+                  "IecAddress": "%IB17",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855570,
+                  "Name": "",
+                  "IecAddress": "%IB18",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855571,
+                  "Name": "",
+                  "IecAddress": "%IB19",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855572,
+                  "Name": "",
+                  "IecAddress": "%IB20",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855573,
+                  "Name": "",
+                  "IecAddress": "%IB21",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855574,
+                  "Name": "",
+                  "IecAddress": "%IB22",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855575,
+                  "Name": "",
+                  "IecAddress": "%IB23",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855576,
+                  "Name": "",
+                  "IecAddress": "%IX24.0",
+                  "Description": "",
+                  "Descriptions": []
+                },
+                {
+                  "Id": 2952855577,
+                  "Name": "",
+                  "IecAddress": "%IL32",
+                  "Description": "",
+                  "Descriptions": []
+                }
+              ],
+              "Outputs": null,
+              "StructuralItems": [
+                {
+                  "Name": "IO_Link_Ch_1",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.DeviceObject.DeviceObject",
+                  "Type": 42450,
+                  "Id": "1001 0000",
+                  "ModuleId": null,
+                  "Version": "1.8.0.0",
+                  "ObjectGuid": "098e3e1b-b9be-42e6-a17f-cdfeef42cf26",
+                  "SlotIndex": 0,
+                  "Inputs": [
+                    {
+                      "Id": 2952855568,
+                      "Name": "",
+                      "IecAddress": "%IB40",
+                      "Description": "",
+                      "Descriptions": []
+                    },
+                    {
+                      "Id": 2952855569,
+                      "Name": "",
+                      "IecAddress": "%IB41",
+                      "Description": "",
+                      "Descriptions": []
+                    },
+                    {
+                      "Id": 2952855570,
+                      "Name": "",
+                      "IecAddress": "%IB42",
+                      "Description": "",
+                      "Descriptions": []
+                    },
+                    {
+                      "Id": 2952855571,
+                      "Name": "",
+                      "IecAddress": "%IB43",
+                      "Description": "",
+                      "Descriptions": []
+                    }
+                  ],
+                  "Outputs": [
+                    {
+                      "Id": 2952921104,
+                      "Name": "",
+                      "IecAddress": "%QB1",
+                      "Description": "",
+                      "Descriptions": null
+                    },
+                    {
+                      "Id": 2952921105,
+                      "Name": "",
+                      "IecAddress": "%QB2",
+                      "Description": "",
+                      "Descriptions": null
+                    },
+                    {
+                      "Id": 2952921106,
+                      "Name": "",
+                      "IecAddress": "%QB3",
+                      "Description": "",
+                      "Descriptions": null
+                    },
+                    {
+                      "Id": 2952921107,
+                      "Name": "",
+                      "IecAddress": "%QB4",
+                      "Description": "",
+                      "Descriptions": null
+                    }
+                  ],
+                  "StructuralItems": []
+                },
+                {
+                  "Name": "IO_Link_Ch_2",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.DeviceObject.DeviceObject",
+                  "Type": 42450,
+                  "Id": "1001 0000",
+                  "ModuleId": null,
+                  "Version": "1.8.0.0",
+                  "ObjectGuid": "6a5932f3-b85b-46a5-9d93-de5e4b50c200",
+                  "SlotIndex": 0,
+                  "Inputs": [
+                    {
+                      "Id": 2952855568,
+                      "Name": "",
+                      "IecAddress": "%IB44",
+                      "Description": "",
+                      "Descriptions": []
+                    },
+                    {
+                      "Id": 2952855569,
+                      "Name": "",
+                      "IecAddress": "%IB45",
+                      "Description": "",
+                      "Descriptions": []
+                    },
+                    {
+                      "Id": 2952855570,
+                      "Name": "",
+                      "IecAddress": "%IB46",
+                      "Description": "",
+                      "Descriptions": []
+                    },
+                    {
+                      "Id": 2952855571,
+                      "Name": "",
+                      "IecAddress": "%IB47",
+                      "Description": "",
+                      "Descriptions": []
+                    }
+                  ],
+                  "Outputs": [
+                    {
+                      "Id": 2952921104,
+                      "Name": "",
+                      "IecAddress": "%QB5",
+                      "Description": "",
+                      "Descriptions": null
+                    },
+                    {
+                      "Id": 2952921105,
+                      "Name": "",
+                      "IecAddress": "%QB6",
+                      "Description": "",
+                      "Descriptions": null
+                    },
+                    {
+                      "Id": 2952921106,
+                      "Name": "",
+                      "IecAddress": "%QB7",
+                      "Description": "",
+                      "Descriptions": null
+                    },
+                    {
+                      "Id": 2952921107,
+                      "Name": "",
+                      "IecAddress": "%QB8",
+                      "Description": "",
+                      "Descriptions": null
+                    }
+                  ],
+                  "StructuralItems": []
+                },
+                {
+                  "Name": "IO_Link_Ch_3",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.DeviceObject.DeviceObject",
+                  "Type": 42450,
+                  "Id": "1001 0000",
+                  "ModuleId": null,
+                  "Version": "1.8.0.0",
+                  "ObjectGuid": "bbb72e73-f61d-4f0a-a134-4ed83b138e83",
+                  "SlotIndex": 0,
+                  "Inputs": [
+                    {
+                      "Id": 2952855568,
+                      "Name": "",
+                      "IecAddress": "%IB48",
+                      "Description": "",
+                      "Descriptions": []
+                    },
+                    {
+                      "Id": 2952855569,
+                      "Name": "",
+                      "IecAddress": "%IB49",
+                      "Description": "",
+                      "Descriptions": []
+                    },
+                    {
+                      "Id": 2952855570,
+                      "Name": "",
+                      "IecAddress": "%IB50",
+                      "Description": "",
+                      "Descriptions": []
+                    },
+                    {
+                      "Id": 2952855571,
+                      "Name": "",
+                      "IecAddress": "%IB51",
+                      "Description": "",
+                      "Descriptions": []
+                    }
+                  ],
+                  "Outputs": [
+                    {
+                      "Id": 2952921104,
+                      "Name": "",
+                      "IecAddress": "%QB9",
+                      "Description": "",
+                      "Descriptions": null
+                    },
+                    {
+                      "Id": 2952921105,
+                      "Name": "",
+                      "IecAddress": "%QB10",
+                      "Description": "",
+                      "Descriptions": null
+                    },
+                    {
+                      "Id": 2952921106,
+                      "Name": "",
+                      "IecAddress": "%QB11",
+                      "Description": "",
+                      "Descriptions": null
+                    },
+                    {
+                      "Id": 2952921107,
+                      "Name": "",
+                      "IecAddress": "%QB12",
+                      "Description": "",
+                      "Descriptions": null
+                    }
+                  ],
+                  "StructuralItems": []
+                },
+                {
+                  "Name": "IO_Link_Ch_4",
+                  "IconName": null,
+                  "EcadId": null,
+                  "TypeName": "_3S.CoDeSys.DeviceObject.DeviceObject",
+                  "Type": 42450,
+                  "Id": "1001 0000",
+                  "ModuleId": null,
+                  "Version": "1.8.0.0",
+                  "ObjectGuid": "55ba6e81-9071-4c91-a421-57ab1077ad5d",
+                  "SlotIndex": 0,
+                  "Inputs": [
+                    {
+                      "Id": 2952855568,
+                      "Name": "",
+                      "IecAddress": "%IB52",
+                      "Description": "",
+                      "Descriptions": []
+                    },
+                    {
+                      "Id": 2952855569,
+                      "Name": "",
+                      "IecAddress": "%IB53",
+                      "Description": "",
+                      "Descriptions": []
+                    },
+                    {
+                      "Id": 2952855570,
+                      "Name": "",
+                      "IecAddress": "%IB54",
+                      "Description": "",
+                      "Descriptions": []
+                    },
+                    {
+                      "Id": 2952855571,
+                      "Name": "",
+                      "IecAddress": "%IB55",
+                      "Description": "",
+                      "Descriptions": []
+                    }
+                  ],
+                  "Outputs": [
+                    {
+                      "Id": 2952921104,
+                      "Name": "",
+                      "IecAddress": "%QB13",
+                      "Description": "",
+                      "Descriptions": null
+                    },
+                    {
+                      "Id": 2952921105,
+                      "Name": "",
+                      "IecAddress": "%QB14",
+                      "Description": "",
+                      "Descriptions": null
+                    },
+                    {
+                      "Id": 2952921106,
+                      "Name": "",
+                      "IecAddress": "%QB15",
+                      "Description": "",
+                      "Descriptions": null
+                    },
+                    {
+                      "Id": 2952921107,
+                      "Name": "",
+                      "IecAddress": "%QB16",
+                      "Description": "",
+                      "Descriptions": null
+                    }
+                  ],
+                  "StructuralItems": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

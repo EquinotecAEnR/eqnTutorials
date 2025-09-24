@@ -1,0 +1,53 @@
+{
+  "IsSynced": true,
+  "SyncMode": 1,
+  "InSyncWithRuntime": true,
+  "ApplicationType": "plc",
+  "Configuration": "appdata",
+  "Solution": "DefaultSolution",
+  "ControllerGuid": "e1f299de-427e-4713-b3e9-c18ac3d94bcc",
+  "LastChange": 638642332872198577,
+  "MachineName": "DESKTOP-NBS8STG",
+  "UserName": "Luís",
+  "ProjectCompleteFilename": "C:\\Users\\User\\Desktop\\gitProjects\\boschRexrothCtrlX_TutorialsAndNotes\\ctrlXOPCUAserver\\PLCexample.project",
+  "CompilerVersion": {
+    "Major": 3,
+    "Minor": 5,
+    "Build": 19,
+    "Revision": 70,
+    "MajorRevision": 0,
+    "MinorRevision": 70
+  },
+  "OwnVersion": {
+    "Major": 1,
+    "Minor": 2,
+    "Build": 0,
+    "Revision": 0,
+    "MajorRevision": 0,
+    "MinorRevision": 0
+  },
+  "ProductAdditionalFolder": "Default",
+  "ProductProfileName": "ctrlX PLC 2.6.2",
+  "ProductId": "ctrlx-plc-engineering",
+  "ProductVersion": "2.6.4",
+  "ProductVersionText": "PLE-V-0206.4",
+  "SyncModeSave": true,
+  "SyncModeDownload": false,
+  "SyncModeAsk": false,
+  "SyncAfterBootApplication": false,
+  "SyncOnOpen": false,
+  "UserMetaData": {
+    "DESKTOP-NBS8STG:Luís": {
+      "MachineName": "DESKTOP-NBS8STG",
+      "UserName": "Luís",
+      "ProjectCompleteFilename": "C:\\Users\\User\\Desktop\\gitProjects\\boschRexrothCtrlX_TutorialsAndNotes\\ctrlXOPCUAserver\\PLCexample.project"
+    }
+  },
+  "CompileinfoChecksum": {
+    "6003f128-4f16-4d24-843a-09a28c5c21be": 4140445415
+  },
+  "SyncDescription": false,
+  "DeviceId": "1001 0080",
+  "DeviceVersion": "2.6.20.0",
+  "UseIoHierachy": true
+}

@@ -1,0 +1,51 @@
+PROGRAM PLC_PRG
+VAR
+	boolVar1:BOOL:= TRUE;
+	boolVar2:BOOL;
+	
+	textVar1:STRING;
+	
+	intVar1:INT;
+	
+	
+	timerToUpdate: TON;
+	timeOn:BOOL:=TRUE;
+	timeGone:BOOL:=FALSE;
+	
+	
+	iCounter: REAL;
+	iInc: REAL;
+END_VAR
+
+////////////////////////////////////////////////////////////////////////////////////
+// Just a variable setting another
+boolVar1:=boolVar2;
+
+// Counting the length of the Text Variable
+intVar1:= LEN(textVar1);
+
+//setting Up a timer
+timerToUpdate(IN:= timeOn, PT:= T#1S, Q=> timeGone, ET=> );
+
+//If the timer triguer went off, restart
+IF timeOn=FALSE THEN
+	timeOn:=TRUE;
+END_IF
+
+// If timer went on, set trigger to False
+// If timer went on add increment
+IF timeGone THEN
+	iCounter:=iCounter+iInc;
+	timeOn:=FALSE;
+END_IF
+
+// if counter >=5 then ser increment to -1
+IF iCounter >= 5 THEN
+	iInc:=-1;
+END_IF
+
+
+// if counter <=0 then set increment to 1
+IF iCounter <= 0 THEN
+	iInc:=1;
+END_IF

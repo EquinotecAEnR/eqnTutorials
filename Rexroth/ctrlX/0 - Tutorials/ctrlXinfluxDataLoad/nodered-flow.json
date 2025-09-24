@@ -1,0 +1,210 @@
+[
+    {
+        "id": "5136fd0fb6d5f22d",
+        "type": "tab",
+        "label": "Influx Feeder",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ab1cd0caebdfaaf0",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "5136fd0fb6d5f22d",
+        "subscription": "f95abfb5fa6b8e46",
+        "path": "plc/app/Application/sym/PLC_PRG/iCounter",
+        "name": "",
+        "x": 210,
+        "y": 120,
+        "wires": [
+            [
+                "68de4678bae47062",
+                "0ac27cbbe0dbce93"
+            ]
+        ]
+    },
+    {
+        "id": "30980636fdf84065",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "5136fd0fb6d5f22d",
+        "subscription": "f95abfb5fa6b8e46",
+        "path": "plc/app/Application/sym/PLC_PRG/timeValue",
+        "name": "",
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "a6770b62de013b59"
+            ]
+        ]
+    },
+    {
+        "id": "6119a474bb58811b",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "5136fd0fb6d5f22d",
+        "subscription": "f95abfb5fa6b8e46",
+        "path": "plc/app/Application/sym/PLC_PRG/timeValueMillis",
+        "name": "",
+        "x": 230,
+        "y": 280,
+        "wires": [
+            [
+                "07842b003d61b30c",
+                "0ac27cbbe0dbce93"
+            ]
+        ]
+    },
+    {
+        "id": "68de4678bae47062",
+        "type": "influxdb out",
+        "z": "5136fd0fb6d5f22d",
+        "influxdb": "e4fda41829a57a6c",
+        "name": "",
+        "measurement": "cycle counter",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "Equinotec",
+        "bucket": "ctrlXcore",
+        "x": 920,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "05936eb213e22715",
+        "type": "influxdb out",
+        "z": "5136fd0fb6d5f22d",
+        "influxdb": "e4fda41829a57a6c",
+        "name": "",
+        "measurement": "time value",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "Equinotec",
+        "bucket": "ctrlXcore",
+        "x": 930,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "07842b003d61b30c",
+        "type": "influxdb out",
+        "z": "5136fd0fb6d5f22d",
+        "influxdb": "e4fda41829a57a6c",
+        "name": "",
+        "measurement": "time value milliseconds",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "Equinotec",
+        "bucket": "ctrlXcore",
+        "x": 970,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "0ac27cbbe0dbce93",
+        "type": "debug",
+        "z": "5136fd0fb6d5f22d",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "a6770b62de013b59",
+        "type": "function",
+        "z": "5136fd0fb6d5f22d",
+        "name": "function 6",
+        "func": "msg.payload=Number(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 200,
+        "wires": [
+            [
+                "05936eb213e22715",
+                "0ac27cbbe0dbce93"
+            ]
+        ]
+    },
+    {
+        "id": "683229ea369a4bd6",
+        "type": "ctrlx-datalayer-subscribe",
+        "z": "5136fd0fb6d5f22d",
+        "subscription": "f95abfb5fa6b8e46",
+        "path": "plc/app/Application/sym/PLC_PRG/timeofdayValue",
+        "name": "",
+        "x": 230,
+        "y": 380,
+        "wires": [
+            [
+                "0ac27cbbe0dbce93",
+                "8e111a750a29497c"
+            ]
+        ]
+    },
+    {
+        "id": "8e111a750a29497c",
+        "type": "influxdb out",
+        "z": "5136fd0fb6d5f22d",
+        "influxdb": "e4fda41829a57a6c",
+        "name": "",
+        "measurement": "time of day",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "Equinotec",
+        "bucket": "ctrlXcore",
+        "x": 930,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "f95abfb5fa6b8e46",
+        "type": "ctrlx-config-subscription",
+        "device": "54f1502df774d0b3",
+        "name": "COREdemo",
+        "publishIntervalMs": "100"
+    },
+    {
+        "id": "e4fda41829a57a6c",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "Local InfluxDB",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://localhost:8086",
+        "timeout": "",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "54f1502df774d0b3",
+        "type": "ctrlx-config",
+        "name": "COREdemo",
+        "hostname": "localhost",
+        "debug": false
+    }
+]

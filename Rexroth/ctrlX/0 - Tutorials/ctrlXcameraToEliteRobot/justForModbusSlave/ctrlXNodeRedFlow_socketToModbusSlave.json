@@ -1,0 +1,217 @@
+[
+    {
+        "id": "0d331d9c0d418199",
+        "type": "tab",
+        "label": "socketTomodbus_cameraToElite",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "13a3151658808645",
+        "type": "tcp in",
+        "z": "0d331d9c0d418199",
+        "name": "",
+        "server": "server",
+        "host": "",
+        "port": "5025",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 140,
+        "y": 60,
+        "wires": [
+            [
+                "e43a7d0a18e6237e",
+                "36b16c0a0839ce5e"
+            ]
+        ]
+    },
+    {
+        "id": "e43a7d0a18e6237e",
+        "type": "debug",
+        "z": "0d331d9c0d418199",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "95326d764cee5824",
+        "type": "debug",
+        "z": "0d331d9c0d418199",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "21966f9f8fbe3f5a",
+        "type": "ctrlx-datalayer-request",
+        "z": "0d331d9c0d418199",
+        "device": "54f1502df774d0b3",
+        "method": "WRITE",
+        "path": "fieldbuses/modbustcp/client/realtime_data/output/data/eliteRobot/cameraData/value1",
+        "payloadFormat": "value_type",
+        "name": "",
+        "x": 740,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0417bed82aa1c252",
+        "type": "function",
+        "z": "0d331d9c0d418199",
+        "name": "function 12",
+        "func": "var msgout\nmsgout = { payload: { \"type\": \"int16\", \"value\": msg.payload.R } }\nreturn msgout;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 260,
+        "wires": [
+            [
+                "21966f9f8fbe3f5a"
+            ]
+        ]
+    },
+    {
+        "id": "9d20f3dc8d0c2ba7",
+        "type": "ctrlx-datalayer-request",
+        "z": "0d331d9c0d418199",
+        "device": "54f1502df774d0b3",
+        "method": "WRITE",
+        "path": "fieldbuses/modbustcp/client/realtime_data/output/data/eliteRobot/cameraData/value2",
+        "payloadFormat": "value_type",
+        "name": "",
+        "x": 760,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "62443df8387407cf",
+        "type": "function",
+        "z": "0d331d9c0d418199",
+        "name": "function 13",
+        "func": "var msgout\nmsgout = { payload: { \"type\": \"int16\", \"value\": msg.payload.X } }\nreturn msgout;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 300,
+        "wires": [
+            [
+                "9d20f3dc8d0c2ba7"
+            ]
+        ]
+    },
+    {
+        "id": "ecd664604ea959d6",
+        "type": "ctrlx-datalayer-request",
+        "z": "0d331d9c0d418199",
+        "device": "54f1502df774d0b3",
+        "method": "WRITE",
+        "path": "fieldbuses/modbustcp/client/realtime_data/output/data/eliteRobot/cameraData/value3",
+        "payloadFormat": "value_type",
+        "name": "",
+        "x": 760,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eda7bbe0e2118c1a",
+        "type": "function",
+        "z": "0d331d9c0d418199",
+        "name": "function 14",
+        "func": "var msgout\nmsgout = { payload: { \"type\": \"int16\", \"value\": msg.payload.Y } }\nreturn msgout;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 340,
+        "wires": [
+            [
+                "ecd664604ea959d6"
+            ]
+        ]
+    },
+    {
+        "id": "36b16c0a0839ce5e",
+        "type": "function",
+        "z": "0d331d9c0d418199",
+        "name": "function 15",
+        "func": "// Input string\nlet str = msg.payload;  // Assuming the input is in msg.payload\n\n// Initialize msg.payload as an object\nmsg.payload = {};\n\n// Split the string by spaces to get each key-value pair\nlet keyValuePairs = str.split(\" \");\n\n// Loop through each key-value pair\nkeyValuePairs.forEach(pair => {\n    // Split each pair by \"=\" to separate the key and value\n    let [key, value] = pair.split(\"=\");\n\n    // Assign directly to msg.payload with the key name\n    msg.payload[key] = Number(value);  // Convert value to a number\n});\n\n// Return the message to pass it to the next node\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 140,
+        "wires": [
+            [
+                "95326d764cee5824",
+                "9c8be741cc35ad8a"
+            ]
+        ]
+    },
+    {
+        "id": "9c8be741cc35ad8a",
+        "type": "function",
+        "z": "0d331d9c0d418199",
+        "name": "function 16",
+        "func": "// Check if msg.payload.R is equal to 1\nif (msg.payload.R === 1) {\n    // Return the modified message object\n    return msg;\n} else {\n    // Optionally return null to stop the flow or return the original message\n    return null; // or return msg; to pass the unchanged message\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 300,
+        "wires": [
+            [
+                "0417bed82aa1c252",
+                "62443df8387407cf",
+                "eda7bbe0e2118c1a"
+            ]
+        ]
+    },
+    {
+        "id": "54f1502df774d0b3",
+        "type": "ctrlx-config",
+        "name": "COREdemo",
+        "hostname": "localhost",
+        "debug": false
+    }
+]

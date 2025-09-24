@@ -1,0 +1,51 @@
+{
+  "IsSynced": false,
+  "SyncMode": 0,
+  "InSyncWithRuntime": false,
+  "ApplicationType": "io",
+  "Configuration": "appdata",
+  "Solution": "DefaultSolution",
+  "ControllerGuid": "596f5e32-4f80-419a-94c5-b2bf3c3665c6",
+  "LastChange": 638690130002251152,
+  "MachineName": "DESKTOP-NBS8STG",
+  "UserName": "Luís",
+  "ProjectCompleteFilename": "C:\\Users\\User\\Desktop\\gitProjects\\AutomationRobotics_TutorialsAndNotes\\Automation\\Rexroth\\ctrlXIFMiolinkMaster\\ctrlX Projects\\IO\\IO_IFM_AL1330_Demo.project",
+  "CompilerVersion": {
+    "Major": 3,
+    "Minor": 5,
+    "Build": 19,
+    "Revision": 70,
+    "MajorRevision": 0,
+    "MinorRevision": 70
+  },
+  "OwnVersion": {
+    "Major": 1,
+    "Minor": 2,
+    "Build": 0,
+    "Revision": 0,
+    "MajorRevision": 0,
+    "MinorRevision": 0
+  },
+  "ProductAdditionalFolder": "Default",
+  "ProductProfileName": "ctrlX IO 2.6.3",
+  "ProductId": "ctrlx-io-engineering",
+  "ProductVersion": "2.6.3",
+  "ProductVersionText": "IOE-V-0206.3",
+  "SyncModeSave": false,
+  "SyncModeDownload": false,
+  "SyncModeAsk": false,
+  "SyncAfterBootApplication": false,
+  "SyncOnOpen": false,
+  "UserMetaData": {
+    "DESKTOP-NBS8STG:Luís": {
+      "MachineName": "DESKTOP-NBS8STG",
+      "UserName": "Luís",
+      "ProjectCompleteFilename": "C:\\Users\\User\\Desktop\\gitProjects\\AutomationRobotics_TutorialsAndNotes\\Automation\\Rexroth\\ctrlXIFMiolinkMaster\\ctrlX Projects\\IO\\IO_IFM_AL1330_Demo.project"
+    }
+  },
+  "CompileinfoChecksum": null,
+  "SyncDescription": false,
+  "DeviceId": "1001 0090",
+  "DeviceVersion": "2.6.0.0",
+  "UseIoHierachy": true
+}

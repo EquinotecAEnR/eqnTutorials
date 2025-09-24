@@ -1,0 +1,4 @@
+sensorID;sensorName;sensorSeriaN#;sensorUnits
+1;distance;KJSJH44;m
+2;flow;FFWW36;l/min
+3;temperature;L9;kelvin
