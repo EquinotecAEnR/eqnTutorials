@@ -1,6 +1,6 @@
 # Equinotec Tutorials
 
-please contact luis c moreira for any further questions
-    luis.moreira@equinotec.com
+please contact Ana Reis for any further questions
+    ana.reis@equinotec.com
 
 thank you
